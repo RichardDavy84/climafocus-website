@@ -1,71 +1,120 @@
-/* -------------------------------
-   1. Add a modern Google Font
---------------------------------- */
+/* ---------------------------------------------------
+   style.css - Single stylesheet for all pages
+   Using Montserrat, modern color scheme, subtle effects
+--------------------------------------------------- */
+
+/* Google Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+/* Reset and Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f9f9f9;
   color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #17494D; /* Teal/Navy blend */
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
   margin: 0;
-  padding: 0;
+}
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links ul li a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: opacity 0.3s;
+}
+.nav-links ul li a:hover {
+  opacity: 0.8;
 }
 
-/* Basic reset for images so they scale properly */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Social Links (top-right) */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+.social-links a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: opacity 0.3s;
+}
+.social-links a:hover {
+  opacity: 0.7;
 }
 
-/* -------------------------------
-   2. Hero / Intro for Services
-   Using Image1.jpg as background
---------------------------------- */
-.services-hero {
+/* Hero Sections (general) */
+.hero-section {
   position: relative;
   width: 100%;
-  height: 40vh; /* Adjust as desired */
+  height: 50vh;
   background: url('Image1.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.services-hero-overlay {
-  background-color: rgba(0,0,0,0.4); /* semi-transparent overlay */
   color: #fff;
-  padding: 2rem;
   text-align: center;
+}
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
   border-radius: 4px;
 }
-.services-hero-overlay h2 {
+.hero-overlay h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
-.services-hero-overlay p {
+.hero-overlay p {
   font-size: 1.2rem;
-  margin: 0;
+  margin-bottom: 1rem;
+}
+.hero-cta {
+  background-color: #fff;
+  color: #17494D;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+.hero-cta:hover {
+  opacity: 0.8;
 }
 
-/* -------------------------------
-   3. Services Intro
---------------------------------- */
+/* Main Content Sections */
+section {
+  padding: 2rem;
+}
+
+/* Services Page: Packages */
 .services-intro {
-  padding: 2rem 1rem;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin-bottom: 2rem;
 }
-.services-intro p {
-  margin-bottom: 0;
-}
-
-/* -------------------------------
-   4. Vertical Packages
-   Using Image2.jpg in the background for entire section
---------------------------------- */
 .vertical-packages {
   background: url('Image2.jpg') center center / cover no-repeat;
   padding: 4rem 1rem;
@@ -74,98 +123,148 @@ img {
   gap: 2rem;
   align-items: center;
 }
-
-.vertical-package {
-  background-color: rgba(255,255,255,0.8);
-  padding: 2rem;
+.package-card {
+  background-color: rgba(255, 255, 255, 0.8);
   max-width: 500px;
   width: 100%;
-  border-radius: 8px;
   text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-
-.vertical-package h3 {
+.package-card h3 {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
-
-.vertical-package .price {
+.package-card .price {
   margin: 0.5rem 0 1rem;
   font-size: 1.1rem;
 }
-
-.vertical-package ul {
+.package-card ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  line-height: 1.6;
 }
-.vertical-package ul li {
+.package-card ul li {
   margin: 0.5rem 0;
 }
-
 .package-cta {
   background-color: #17494D;
   color: #fff;
-  border: none;
   padding: 0.75rem 1.5rem;
+  border: none;
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 .package-cta:hover {
   opacity: 0.9;
 }
 
-/* -------------------------------
-   5. Expert Advisory Section
---------------------------------- */
-.expert-advisory {
-  padding: 3rem 1rem;
+/* Case Studies */
+.case-studies-intro {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
-.expert-advisory h3 {
-  font-size: 1.8rem;
+.case-study {
+  margin-bottom: 2rem;
+}
+.case-study h3 {
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
-.expert-advisory .advisory-text {
-  max-width: 600px;
-  margin: 1rem auto 2rem;
-  line-height: 1.6;
+.case-study p {
+  line-height: 1.5;
 }
 
-/* -------------------------------
-   6. Buttons / CTA
---------------------------------- */
-button.package-cta,
-.expert-advisory .package-cta {
+/* About Page */
+.founder-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.founder-image {
+  flex: 1 1 300px;
+  background: #eee;
+  border-radius: 4px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.founder-details {
+  flex: 1 1 400px;
+}
+.founder-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+.follow-note {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #444;
+}
+
+/* Contact Form */
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-section label {
+  font-weight: 600;
+}
+.contact-section input,
+.contact-section textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-section button {
   background-color: #17494D;
   color: #fff;
+  padding: 0.75rem;
   border: none;
-  padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
+  transition: opacity 0.3s;
 }
-button.package-cta:hover {
+.contact-section button:hover {
   opacity: 0.9;
 }
 
-/* -------------------------------
-   7. Responsive Tweaks
---------------------------------- */
+/* Footer */
+footer {
+  background-color: #17494D;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Tweaks */
 @media (max-width: 768px) {
-  .services-hero {
-    height: 30vh;
+  .hero-section {
+    height: 40vh;
   }
-  .services-hero-overlay h2 {
+  .hero-overlay h2 {
     font-size: 1.5rem;
   }
-  .vertical-package {
-    max-width: 90%;
+  .founder-section {
+    flex-direction: column;
   }
 }
 
