@@ -12,50 +12,54 @@
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-    <!-- Social Links (top right) -->
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">in</a>
-      <a href="https://twitter.com/yourprofile" target="_blank">X</a>
-      <a href="https://bsky.app/profile/yourprofile" target="_blank">B</a>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+          <img src="LinkedIn_logo.png" alt="LinkedIn">
+        </a>
+        <a href="https://x.com/RDavy84" target="_blank">
+          <img src="X_logo.png" alt="X (Twitter)">
+        </a>
+        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+          <img src="BlueSky_logo.png" alt="BlueSky">
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Navigation Bar -->
-  <nav class="nav-links">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="case-studies.html">Case Studies</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section (optional) -->
-  <section class="hero-section">
-    <div class="hero-overlay">
+  <!-- Hero with background image (Image1 or Image2) -->
+  <section class="contact-hero">
+    <div class="contact-hero-overlay">
       <h2>Contact Us</h2>
       <p>We’re here to help you navigate climate challenges</p>
     </div>
   </section>
 
-  <!-- Contact Form -->
-  <section class="contact-section">
-    <form action="#" method="POST">
-      <label for="name">Name *</label>
-      <input type="text" id="name" name="name" required>
+  <!-- Contact Form in a box with a background image for the section -->
+  <section class="contact-form-container">
+    <div class="contact-box">
+      <form action="#" method="POST">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="organization">Organization</label>
-      <input type="text" id="organization" name="organization">
+        <label for="organization">Organization</label>
+        <input type="text" id="organization" name="organization">
 
-      <label for="message">Message / Project Overview *</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message">Message / Project Overview *</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->

@@ -1,12 +1,13 @@
-/* ---------------------------------------------------
-   style.css - Single stylesheet for all pages
-   Using Montserrat, modern color scheme, subtle effects
---------------------------------------------------- */
+/* -------------------------------------------------------------
+   style.css
+   A modern, responsive style for "Climate Compass"
+   Using Montserrat for a clean, contemporary look
+-------------------------------------------------------------- */
 
 /* Google Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-/* Reset and Global */
+/* Reset / Global */
 * {
   margin: 0;
   padding: 0;
@@ -17,18 +18,23 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Header and Navigation */
+/* Header and Horizontal Nav */
 header {
-  background-color: #17494D; /* Teal/Navy blend */
-  padding: 0.5rem 2rem;
+  background-color: #17494D; /* Teal/Navy mix */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem 2rem;
 }
 .logo h1 {
   color: #fff;
@@ -36,45 +42,50 @@ header {
   font-weight: 600;
   margin: 0;
 }
-.nav-links ul {
-  list-style: none;
+.navbar {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
 }
-.nav-links ul li a {
+.navbar a {
   color: #fff;
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   transition: opacity 0.3s;
 }
-.nav-links ul li a:hover {
+.navbar a:hover {
   opacity: 0.8;
 }
-
-/* Social Links (top-right) */
-.social-links {
-  display: flex;
-  gap: 1rem;
+.navbar a.active {
+  text-decoration: underline;
 }
-.social-links a {
-  color: #fff;
-  font-size: 1.2rem;
+
+/* Social Media Icons in Header (top-right) */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 2rem;
+}
+.social-icons img {
+  width: 24px;  /* Adjust icon size */
+  height: 24px;
   transition: opacity 0.3s;
 }
-.social-links a:hover {
+.social-icons img:hover {
   opacity: 0.7;
 }
 
-/* Hero Sections (general) */
-.hero-section {
+/* Hero / Common Sections */
+.hero {
   position: relative;
   width: 100%;
-  height: 50vh;
-  background: url('Image1.jpg') center center / cover no-repeat;
+  height: 60vh;
+  background: #ccc; /* fallback */
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   text-align: center;
 }
 .hero-overlay {
@@ -102,20 +113,34 @@ header {
   opacity: 0.8;
 }
 
-/* Main Content Sections */
-section {
-  padding: 2rem;
+/* Home Page: Two images layout */
+.home-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem;
+}
+.home-image-block {
+  flex: 1 1 45%;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* Services Page: Packages */
+/* Services Page */
 .services-intro {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   line-height: 1.5;
-  margin-bottom: 2rem;
 }
+.services-intro p {
+  margin-bottom: 0;
+}
+
+/* Vertical Packages with background */
 .vertical-packages {
+  /* Using 'Image2.jpg' for background, but you can swap if desired */
   background: url('Image2.jpg') center center / cover no-repeat;
   padding: 4rem 1rem;
   display: flex;
@@ -124,7 +149,7 @@ section {
   align-items: center;
 }
 .package-card {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   max-width: 500px;
   width: 100%;
   text-align: center;
@@ -168,10 +193,10 @@ section {
 .case-studies-intro {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 2rem;
+  margin: 2rem auto;
 }
 .case-study {
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 .case-study h3 {
   font-size: 1.4rem;
@@ -179,6 +204,7 @@ section {
 }
 .case-study p {
   line-height: 1.5;
+  margin-bottom: 0.75rem;
 }
 
 /* About Page */
@@ -186,17 +212,15 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  margin: 2rem;
   align-items: flex-start;
-  margin-top: 2rem;
 }
 .founder-image {
   flex: 1 1 300px;
-  background: #eee;
-  border-radius: 4px;
-  min-height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 300px;
+}
+.founder-image img {
+  border-radius: 6px;
 }
 .founder-details {
   flex: 1 1 400px;
@@ -213,26 +237,51 @@ section {
   color: #444;
 }
 
-/* Contact Form */
-.contact-section {
-  max-width: 600px;
-  margin: 0 auto;
+/* Contact Page */
+.contact-hero {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background: url('Image1.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
-.contact-section form {
+.contact-hero-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 4px;
+  text-align: center;
+}
+.contact-form-container {
+  /* Same 'Image2.jpg' or use 'Image1.jpg' again to unify style */
+  background: url('Image2.jpg') center center / cover no-repeat;
+  padding: 4rem 1rem;
+}
+.contact-box {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.contact-box form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.contact-section label {
+.contact-box label {
   font-weight: 600;
 }
-.contact-section input,
-.contact-section textarea {
+.contact-box input,
+.contact-box textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.contact-section button {
+.contact-box button {
   background-color: #17494D;
   color: #fff;
   padding: 0.75rem;
@@ -242,7 +291,7 @@ section {
   cursor: pointer;
   transition: opacity 0.3s;
 }
-.contact-section button:hover {
+.contact-box button:hover {
   opacity: 0.9;
 }
 
@@ -257,7 +306,7 @@ footer {
 
 /* Responsive Tweaks */
 @media (max-width: 768px) {
-  .hero-section {
+  .hero {
     height: 40vh;
   }
   .hero-overlay h2 {
@@ -265,6 +314,10 @@ footer {
   }
   .founder-section {
     flex-direction: column;
+    align-items: center;
+  }
+  .founder-image {
+    max-width: 80%;
   }
 }
 

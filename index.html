@@ -12,27 +12,29 @@
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-    <!-- Social Links (top right) -->
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">in</a>
-      <a href="https://twitter.com/yourprofile" target="_blank">X</a>
-      <a href="https://bsky.app/profile/yourprofile" target="_blank">B</a>
+    <div class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+          <img src="LinkedIn_logo.png" alt="LinkedIn">
+        </a>
+        <a href="https://x.com/RDavy84" target="_blank">
+          <img src="X_logo.png" alt="X (Twitter)">
+        </a>
+        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+          <img src="BlueSky_logo.png" alt="BlueSky">
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Navigation Bar -->
-  <nav class="nav-links">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="case-studies.html">Case Studies</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-section">
+  <!-- Hero Section with Image1 or Image2 -->
+  <section class="hero" style="background: url('Image1.jpg') center center/cover no-repeat;">
     <div class="hero-overlay">
       <h2>Navigate Climate Complexity with Confidence</h2>
       <p>Advanced data, analysis, and insights to guide your organization's climate strategy.</p>
@@ -40,14 +42,24 @@
     </div>
   </section>
 
-  <!-- Introduction / Overview Section -->
+  <!-- Introduction + Images Section -->
   <section>
-    <h3>Welcome to Climate Compass</h3>
-    <p>
-      We offer world-class climate consulting, data-driven solutions, and expert guidance 
-      for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
-      providing high-resolution climate datasets, tailored analyses, and strategic advice.
+    <h3 style="text-align:center; margin: 2rem 0;">Welcome to Climate Compass</h3>
+    <p style="max-width:800px; margin:0 auto 2rem; line-height:1.5; text-align:center;">
+      We offer world-class climate consulting, data-driven solutions, and expert guidance for 
+      businesses, governments, and NGOs. Our team brings deep scientific expertise, providing 
+      high-resolution climate datasets, tailored analyses, and strategic advice.
     </p>
+
+    <!-- Two images in a modern layout -->
+    <div class="home-images">
+      <div class="home-image-block">
+        <img src="Image1.jpg" alt="Climate Compass Image 1">
+      </div>
+      <div class="home-image-block">
+        <img src="Image2.jpg" alt="Climate Compass Image 2">
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
