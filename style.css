@@ -68,7 +68,7 @@ header {
   margin-left: 2rem;
 }
 .social-icons img {
-  width: 24px;  /* Adjust icon size */
+  width: 24px;  /* Adjust icon size in the HEADER */
   height: 24px;
   transition: opacity 0.3s;
 }
@@ -187,24 +187,13 @@ header {
   max-width: 700px;
   margin: 2rem auto;
 }
-/* Additional spacing for each case study */
-.case-study {
-  margin: 3rem 2rem; /* more vertical space */
-}
-.case-study h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-.case-study p {
-  line-height: 1.5;
-  margin-bottom: 0.75rem;
-}
-/* Video background for case studies */
+/* Double the height for each video-case */
 .video-case {
   position: relative;
   color: #fff;
   overflow: hidden;
-  margin: 3rem 2rem; /* extra spacing */
+  margin: 3rem 2rem;
+  height: 120vh; /* doubled from ~60vh to ~120vh for more vertical space */
 }
 .video-case .video-bg {
   position: absolute;
@@ -220,6 +209,8 @@ header {
   background-color: rgba(0,0,0,0.4);
   padding: 3rem;
   border-radius: 4px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* About Page */
@@ -256,6 +247,14 @@ header {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+}
+.social-bottom-logos img {
+  width: 8px;   /* 1/8th the original 64 or 24? Minimally tiny. */
+  height: 8px;  /* Adjust as needed for better visibility. */
+  transition: opacity 0.3s;
+}
+.social-bottom-logos img:hover {
+  opacity: 0.7;
 }
 
 /* Contact Page */
@@ -339,5 +338,7 @@ footer {
   .founder-image {
     max-width: 80%;
   }
+  .video-case {
+    height: 60vh; /* reduce a bit on mobile so it's not too tall */
+  }
 }
-
