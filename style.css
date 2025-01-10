@@ -113,18 +113,11 @@ header {
   opacity: 0.8;
 }
 
-/* Home Page: Two images layout */
-.home-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 2rem;
-}
-.home-image-block {
-  flex: 1 1 45%;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+/* Home Page Video Section */
+.home-video {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: center;
 }
 
 /* Services Page */
@@ -140,7 +133,6 @@ header {
 
 /* Vertical Packages with background */
 .vertical-packages {
-  /* Using 'Image2.jpg' for background, but you can swap if desired */
   background: url('Image2.jpg') center center / cover no-repeat;
   padding: 4rem 1rem;
   display: flex;
@@ -195,8 +187,9 @@ header {
   max-width: 700px;
   margin: 2rem auto;
 }
+/* Additional spacing for each case study */
 .case-study {
-  margin: 2rem;
+  margin: 3rem 2rem; /* more vertical space */
 }
 .case-study h3 {
   font-size: 1.4rem;
@@ -205,6 +198,28 @@ header {
 .case-study p {
   line-height: 1.5;
   margin-bottom: 0.75rem;
+}
+/* Video background for case studies */
+.video-case {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  margin: 3rem 2rem; /* extra spacing */
+}
+.video-case .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.video-case .case-content {
+  position: relative;
+  background-color: rgba(0,0,0,0.4);
+  padding: 3rem;
+  border-radius: 4px;
 }
 
 /* About Page */
@@ -236,6 +251,12 @@ header {
   font-style: italic;
   color: #444;
 }
+.social-bottom-logos {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
 
 /* Contact Page */
 .contact-hero {
@@ -255,7 +276,6 @@ header {
   text-align: center;
 }
 .contact-form-container {
-  /* Same 'Image2.jpg' or use 'Image1.jpg' again to unify style */
   background: url('Image2.jpg') center center / cover no-repeat;
   padding: 4rem 1rem;
 }
