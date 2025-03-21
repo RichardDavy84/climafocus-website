@@ -18,7 +18,6 @@
       <a href="case-studies.html">Case Studies</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="active">Contact</a>
-      <!-- Social Icons -->
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
           <img src="LinkedIn_logo.png" alt="LinkedIn">
@@ -41,11 +40,11 @@
     </div>
   </section>
 
-  <!-- Contact Form in a box with a background image -->
+  <!-- Contact Form (Formspree) -->
   <section class="contact-form-container">
     <div class="contact-box">
-      <!-- mailto form to send an email to Dr. Davy -->
-      <form action="mailto:richard_a_j_davy@yahoo.com" method="POST" enctype="text/plain">
+      <!-- Replace the action with your unique endpoint -->
+      <form action="https://formspree.io/f/mblggkwq" method="POST">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required>
 
@@ -58,10 +57,32 @@
         <label for="message">Message / Project Overview *</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
+        <!-- Hidden input to identify website submissions -->
+        <input type="hidden" name="_subject" value="New Inquiry from Climate Compass Website" />
+
         <button type="submit">Send Message</button>
       </form>
     </div>
   </section>
+
+  <!-- Floating Formbutton -->
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {
+      action: "https://formspree.io/f/mblggkwq",
+      title: "How can we help?",
+      fields: [
+        { type: "email", label: "Email:", name: "email", required: true },
+        { type: "textarea", label: "Message:", name: "message" },
+        { type: "submit" }
+      ],
+      styles: {
+        title: { backgroundColor: "gray" },
+        button: { backgroundColor: "gray" }
+      }
+    });
+  </script>
 
   <!-- Footer -->
   <footer>
