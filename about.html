@@ -18,7 +18,6 @@
       <a href="case-studies.html">Case Studies</a>
       <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
-      <!-- Social Icons -->
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
           <img src="LinkedIn_logo.png" alt="LinkedIn">
@@ -34,7 +33,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="background: url('Image1.jpg') center center/cover no-repeat;">
+  <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
     <div class="hero-overlay">
       <h2>About Climate Compass</h2>
       <p>Bridging Cutting-Edge Climate Science and Real-World Decision Making</p>
@@ -64,7 +63,6 @@
         Interested in staying updated? Follow Dr. Davy on social media for the latest climate 
         insights and project news!
       </p>
-      <!-- Additional social links at the bottom of the biography -->
       <div class="social-bottom-logos">
         <a href="https://x.com/RDavy84" target="_blank">
           <img src="X_logo.png" alt="X (Twitter)">
@@ -78,6 +76,25 @@
       </div>
     </div>
   </section>
+
+  <!-- Floating Formbutton -->
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {
+      action: "https://formspree.io/f/mblggkwq",
+      title: "How can we help?",
+      fields: [
+        { type: "email", label: "Email:", name: "email", required: true },
+        { type: "textarea", label: "Message:", name: "message" },
+        { type: "submit" }
+      ],
+      styles: {
+        title: { backgroundColor: "gray" },
+        button: { backgroundColor: "gray" }
+      }
+    });
+  </script>
 
   <!-- Footer -->
   <footer>
