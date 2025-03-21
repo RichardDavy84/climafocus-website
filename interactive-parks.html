@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Climate Compass | Interactive Parks App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1>Climate Compass</h1>
+    </div>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+          <img src="LinkedIn_logo.png" alt="LinkedIn">
+        </a>
+        <a href="https://x.com/RDavy84" target="_blank">
+          <img src="X_logo.png" alt="X (Twitter)">
+        </a>
+        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+          <img src="BlueSky_logo.png" alt="BlueSky">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
+    <div class="hero-overlay">
+      <h2>Explore Northern Norway Parks</h2>
+      <p>Interactive Shiny App for Climate Futures in Reisa National Park</p>
+    </div>
+  </section>
+
+  <!-- Intro Text -->
+  <section style="max-width:800px; margin:2rem auto; line-height:1.5; text-align:center;">
+    <h3>Reisa National Park Explorer</h3>
+    <p>
+      This Shiny app provides an overview of potential climate futures for Reisa National Park. 
+      It highlights priority risks such as forest fires, soil moisture, drought periods, and temperature anomalies. 
+      Adjust parameters and scenarios to see how each driver may change over time.
+    </p>
+  </section>
+
+  <!-- Embedding the Shiny App with an iframe -->
+  <section style="max-width:1200px; margin:2rem auto; padding:1rem;">
+    <iframe 
+      src="https://seasonalforecastsfornorway.shinyapps.io/Reisa_app/" 
+      width="100%" 
+      height="700" 
+      style="border:1px solid #ccc; border-radius:4px;">
+    </iframe>
+    <p style="margin-top:1rem; text-align:center; font-style:italic;">
+      (If the app doesn't load, you can access it directly at 
+      <a href="https://seasonalforecastsfornorway.shinyapps.io/Reisa_app/" target="_blank">this link</a>.)
+    </p>
+  </section>
+
+  <!-- Floating Formbutton -->
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {
+      action: "https://formspree.io/f/mblggkwq",
+      title: "How can we help?",
+      fields: [
+        { type: "email", label: "Email:", name: "email", required: true },
+        { type: "textarea", label: "Message:", name: "message" },
+        { type: "submit" }
+      ],
+      styles: {
+        title: { backgroundColor: "gray" },
+        button: { backgroundColor: "gray" }
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Climate Compass. All rights reserved.</p>
+  </footer>
+</body>
+</html>
