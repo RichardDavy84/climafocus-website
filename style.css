@@ -68,7 +68,7 @@ header {
   margin-left: 2rem;
 }
 .social-icons img {
-  width: 24px;  /* Adjust icon size in the HEADER */
+  width: 24px; 
   height: 24px;
   transition: opacity 0.3s;
 }
@@ -118,6 +118,12 @@ header {
   width: 100%;
   margin: 2rem 0;
   text-align: center;
+}
+.home-video video {
+  width: 80%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Services Page */
@@ -187,13 +193,13 @@ header {
   max-width: 700px;
   margin: 2rem auto;
 }
-/* Double the height for each video-case */
+/* Doubling the video-case height from default ~60vh to ~120vh */
 .video-case {
   position: relative;
   color: #fff;
   overflow: hidden;
   margin: 3rem 2rem;
-  height: 120vh; /* doubled from ~60vh to ~120vh for more vertical space */
+  height: 120vh;
 }
 .video-case .video-bg {
   position: absolute;
@@ -211,6 +217,13 @@ header {
   border-radius: 4px;
   max-width: 800px;
   margin: 0 auto;
+}
+.case-content h3 {
+  margin-bottom: 1rem; 
+}
+.case-content p {
+  margin-bottom: 1rem; 
+  line-height: 1.6;
 }
 
 /* About Page */
@@ -249,8 +262,8 @@ header {
   align-items: center;
 }
 .social-bottom-logos img {
-  width: 8px;   /* 1/8th the original 64 or 24? Minimally tiny. */
-  height: 8px;  /* Adjust as needed for better visibility. */
+  width: 20px; 
+  height: 20px;
   transition: opacity 0.3s;
 }
 .social-bottom-logos img:hover {
@@ -262,7 +275,7 @@ header {
   position: relative;
   width: 100%;
   height: 40vh;
-  background: url('Image1.jpg') center center / cover no-repeat;
+  background: url('Banner.png') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,6 +352,6 @@ footer {
     max-width: 80%;
   }
   .video-case {
-    height: 60vh; /* reduce a bit on mobile so it's not too tall */
+    height: 60vh; /* reduce on mobile so it's not too large */
   }
 }
