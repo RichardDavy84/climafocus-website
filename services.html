@@ -18,7 +18,6 @@
       <a href="case-studies.html">Case Studies</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <!-- Social Icons -->
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
           <img src="LinkedIn_logo.png" alt="LinkedIn">
@@ -34,7 +33,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="background: url('Image1.jpg') center center/cover no-repeat;">
+  <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
     <div class="hero-overlay">
       <h2>Our Services</h2>
       <p>Data-Driven, Actionable Climate Solutions</p>
@@ -50,7 +49,7 @@
     </p>
   </section>
 
-  <!-- Vertical Packages (Background: Image2.jpg) -->
+  <!-- Vertical Packages (background: Image2.jpg in CSS) -->
   <section class="vertical-packages">
 
     <!-- Basic Package -->
@@ -63,7 +62,6 @@
         <li>Summary presentation of key findings</li>
         <li>Sector-specific metrics</li>
       </ul>
-      <!-- Link to contact.html -->
       <a href="contact.html" class="package-cta">Request a Quote</a>
     </div>
 
@@ -72,11 +70,10 @@
       <h3>Expert Advisory</h3>
       <p class="price"><strong>Starting at $3k</strong></p>
       <ul>
-        <li>Provision of targeted memos and briefings</li>
-        <li>Synthesis of current understanding on chosen topic</li>
+        <li>Targeted memos & briefings</li>
+        <li>Synthesis of current literature</li>
         <li>One consultation (up to 2 hours)</li>
       </ul>
-      <!-- Link to contact.html -->
       <a href="contact.html" class="package-cta">Request a Quote</a>
     </div>
 
@@ -88,13 +85,31 @@
         <li>Multiple consultations</li>
         <li>Multi-region data & custom variables</li>
         <li>Bias-corrected projections</li>
-        <li>Presentations and memos of key findings</li>
+        <li>Presentations & memos of key findings</li>
       </ul>
-      <!-- Link to contact.html -->
       <a href="contact.html" class="package-cta">Request a Quote</a>
     </div>
 
   </section>
+
+  <!-- Floating Formbutton -->
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {
+      action: "https://formspree.io/f/mblggkwq",
+      title: "How can we help?",
+      fields: [
+        { type: "email", label: "Email:", name: "email", required: true },
+        { type: "textarea", label: "Message:", name: "message" },
+        { type: "submit" }
+      ],
+      styles: {
+        title: { backgroundColor: "gray" },
+        button: { backgroundColor: "gray" }
+      }
+    });
+  </script>
 
   <!-- Footer -->
   <footer>
