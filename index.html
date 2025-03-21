@@ -33,8 +33,8 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: url('Image1.jpg') center center/cover no-repeat;">
+  <!-- Hero Section with Banner.png -->
+  <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
     <div class="hero-overlay">
       <h2>Navigate Climate Complexity with Confidence</h2>
       <p>Advanced data, analysis, and insights to guide your organization's climate strategy.</p>
@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <!-- Intro Text -->
+  <!-- Introductory Text (Optional) -->
   <section style="max-width:800px; margin:2rem auto; line-height:1.5; text-align:center;">
     <h3>Welcome to Climate Compass</h3>
     <p>
@@ -52,15 +52,84 @@
     </p>
   </section>
 
-  <!-- Bottom Video Section -->
+  <!-- Three-Part Services / Solutions Section -->
+  <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
+    <!-- (1) Climate Data -->
+    <div style="margin-bottom:2rem;">
+      <h3 style="margin-bottom:0.5rem;">1) Climate Data</h3>
+      <p style="margin-bottom:1rem;">
+        Bringing climate data and uncertainty into focus for local issues. Many organizations have 
+        a qualitative grasp of climate change but lack the **quantitative** insights needed to 
+        prioritize and adapt effectively. We solve this by delivering **high-resolution**, 
+        uncertainty-aware data and analyses directly relevant to your local or regional context.
+      </p>
+      <div style="display:flex; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <!-- Placeholder for the KrigR.gif -->
+        <img src="KrigR.gif" alt="Resolution Enhancement (Placeholder)" style="max-width:250px; border:1px solid #ccc; border-radius:4px;">
+        <p style="flex:1; line-height:1.6;">
+          <strong>Why Our Solution?</strong><br>
+          We take raw model outputs and convert them into **decision-ready** datasets—removing biases,
+          refining resolution, and highlighting uncertainties. This empowers you to 
+          plan for a range of scenarios, ensuring you’re not caught off-guard by evolving 
+          climate realities.
+        </p>
+      </div>
+    </div>
+
+    <!-- (2) Climate Consulting -->
+    <div style="margin-bottom:2rem;">
+      <h3 style="margin-bottom:0.5rem;">2) Climate Consulting</h3>
+      <p style="margin-bottom:1rem;">
+        We provide **comprehensive, comprehensible** summaries of the latest climate research. 
+        If you feel lost in an ocean of scientific literature—where IPCC reports may be too 
+        dense or not tailored to your local needs—our personalized consulting offers the 
+        clarity and context you require.
+      </p>
+      <div style="display:flex; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <!-- Placeholder for the Climate_consulting.jpg -->
+        <img src="Climate_consulting.jpg" alt="Climate Consulting Placeholder" style="max-width:250px; border:1px solid #ccc; border-radius:4px;">
+        <p style="flex:1; line-height:1.6;">
+          <strong>Why Our Solution?</strong><br>
+          Our team distills **cutting-edge** climate science into 
+          **actionable guidance**, bridging the gap between global reports and 
+          **region-specific** challenges. We equip you with accessible briefs, clear 
+          communication, and tailor-made recommendations.
+        </p>
+      </div>
+    </div>
+
+    <!-- (3) Interactive Data Tools -->
+    <div>
+      <h3 style="margin-bottom:0.5rem;">3) Interactive Data</h3>
+      <p style="margin-bottom:1rem;">
+        Bring your climate data to life with **web-based tools** that let you explore 
+        scenarios and time horizons dynamically. As your data needs evolve, these platforms 
+        help you **visualize**, **compare**, and **adapt** in real time.
+      </p>
+      <div style="display:flex; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <!-- No image was explicitly mentioned beyond the text, but you could insert another placeholder -->
+        <p style="flex:1; line-height:1.6;">
+          <strong>The Problem We Solve:</strong><br>
+          Many clients find static reports limiting because their questions shift over time. 
+          Our interactive tools give you **ongoing flexibility**, ensuring you can delve 
+          deeper into the data, test what-if scenarios, and keep pace with changing 
+          challenges—without needing to commission a brand-new study every time.
+          <br><br>
+          <em>Curious about real-world applications?</em> Head over to our 
+          <a href="case-studies.html" style="text-decoration:underline;">Case Studies</a> 
+          page for examples. We also offer **training courses** on how to use these tools 
+          effectively in your organization.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Video Section (auto-play, loop, muted) -->
   <section class="home-video">
-    <!-- "Nature_1.mp4" at the bottom -->
-    <video 
-      src="Nature_1.mp4"
-      controls
-      loop
-      muted
-      style="width:80%; max-width:1000px;">
+    <video autoplay loop muted playsinline>
+      <source src="Nature_1.mp4" type="video/mp4">
+      <!-- Fallback text if video doesn't load -->
+      Your browser does not support the video tag.
     </video>
   </section>
 
@@ -71,3 +140,4 @@
 
 </body>
 </html>
+
