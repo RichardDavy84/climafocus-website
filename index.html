@@ -34,24 +34,46 @@
     </div>
   </header>
 
-  <!-- Hero Section with Banner -->
-  <section class="hero" style="background: url('Image1.jpg') center center/cover no-repeat;">
-    <div class="hero-overlay">
-      <h2>Navigate Climate Complexity with Confidence</h2>
-      <p>Advanced data, analysis, and insights to guide your organization's climate strategy.</p>
-      <a href="services.html" class="hero-cta">Explore Our Services</a>
-    </div>
-  </section>
+<!-- Hero Section with reduced height -->
+<section 
+  class="hero"
+  style="
+    height: 42vh;  /* ~30% less than the original 60vh */
+    background: url('Image1.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  "
+>
+  <div style="background-color: rgba(0, 0, 0, 0.3); padding: 2rem; border-radius: 4px;">
+    <h2>Navigate Climate Complexity with Confidence</h2>
+    <p>Advanced data, analysis, and insights to guide your organization's climate strategy.</p>
+    <a href="services.html" class="hero-cta">Explore Our Services</a>
+  </div>
+</section>
 
-  <!-- Introductory Text -->
-  <section style="max-width:800px; margin:2rem auto; line-height:1.5; text-align:center;">
-    <h3>Welcome to Climate Compass</h3>
-    <p>
-      We offer world-class climate consulting, data-driven solutions, and expert guidance 
-      for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
-      providing high-resolution climate datasets, tailored analyses, and strategic advice.
-    </p>
-  </section>
+<!-- Introductory Text with Banner.png in background -->
+<section 
+  style="
+    max-width: 100%;
+    margin: 0 auto; 
+    line-height: 1.5; 
+    text-align: center; 
+    background: url('Banner.png') center center / cover no-repeat;
+    padding: 3rem 1rem; 
+    color: #fff; /* Ensure readability on the banner background */
+"
+>
+  <h3>Welcome to Climate Compass</h3>
+  <p style="max-width: 800px; margin: 0 auto;">
+    We offer world-class climate consulting, data-driven solutions, and expert guidance 
+    for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
+    providing high-resolution climate datasets, tailored analyses, and strategic advice.
+  </p>
+</section>
+
 
   <!-- Three-Part Services / Solutions Section -->
   <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
