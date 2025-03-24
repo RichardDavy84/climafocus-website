@@ -69,7 +69,7 @@ header {
 }
 .social-icons img {
   width: 24px; 
-  height: 24px;
+  height: auto;
   transition: opacity 0.3s;
 }
 .social-icons img:hover {
