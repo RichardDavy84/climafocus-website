@@ -34,60 +34,81 @@
     </div>
   </header>
 
-<!-- Hero Section with reduced height -->
-<section 
-  class="hero"
-  style="
-    height: 60vh;  /* ~30% less than the original 60vh */
-    background: url('Image1.jpg') center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  "
->
-  <div style="background-color: rgba(0, 0, 0, 0.3); padding: 2rem; border-radius: 4px;">
-    <h2>Navigate Climate Complexity with Confidence</h2>
-    <p>Advanced data, analysis, and insights to guide your organization's climate strategy.</p>
-    <a href="services.html" class="hero-cta">Explore Our Services</a>
-  </div>
-</section>
-
-<!-- Introductory Text with Banner.png in background, showing full height of image -->
-<section 
-  style="
-    margin: 0 auto; 
-    line-height: 1.5; 
-    text-align: center; 
-    background: url('Banner.png') center top no-repeat;
-    background-size: contain; /* Show entire vertical extent, no cropping */
-    min-height: 600px;        /* Ensure enough space to display most/all of image */
-    padding: 2rem 1rem; 
-    position: relative;       /* Allows for absolutely-positioned elements if needed */
-"
->
-  <!-- Pop-out box with slightly opaque background -->
-  <div 
+  <!-- Hero Section, reduced to 40vh -->
+  <section 
+    class="hero"
     style="
-      background-color: rgba(0, 0, 0, 0.5); 
-      max-width: 800px; 
-      margin: 0 auto; 
-      border-radius: 4px; 
-      padding: 2rem;
+      height: 40vh; /* Reduced vertical extent */
+      background: url('Image1.jpg') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: #fff;
+      position: relative;
     "
   >
-    <h3>Welcome to Climate Compass</h3>
-    <p>
-      We offer world-class climate consulting, data-driven solutions, and expert guidance 
-      for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
-      providing high-resolution climate datasets, tailored analyses, and strategic advice.
-    </p>
-  </div>
-</section>
+    <div 
+      style="
+        background-color: rgba(0, 0, 0, 0.3); 
+        padding: 2rem; 
+        border-radius: 4px;
+      "
+    >
+      <h2>Navigate Climate Complexity with Confidence</h2>
+      <p>Advanced data, analysis, and insights to guide your organization's climate strategy.</p>
+    </div>
 
+    <!-- “Explore Our Services” placed below the box -->
+    <a 
+      href="services.html" 
+      class="hero-cta"
+      style="
+        position: absolute; 
+        bottom: 2rem; 
+        background-color: #fff; 
+        color: #17494D; 
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 600;
+        text-decoration: none;
+      "
+    >
+      Explore Our Services
+    </a>
+  </section>
 
+  <!-- Introductory Text with Banner.png in background, removing large min-height -->
+  <section 
+    style="
+      margin: 0 auto; 
+      line-height: 1.5; 
+      text-align: center; 
+      background: url('Banner.png') center top no-repeat;
+      background-size: contain; 
+      padding: 2rem 1rem; 
+      position: relative;
+    "
+  >
+    <!-- Pop-out box with slightly opaque background -->
+    <div 
+      style="
+        background-color: rgba(0, 0, 0, 0.5); 
+        max-width: 800px; 
+        margin: 0 auto; 
+        border-radius: 4px; 
+        padding: 2rem;
+        color: #fff;
+      "
+    >
+      <h3>Welcome to Climate Compass</h3>
+      <p>
+        We offer world-class climate consulting, data-driven solutions, and expert guidance 
+        for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
+        providing high-resolution climate datasets, tailored analyses, and strategic advice.
+      </p>
+    </div>
+  </section>
 
   <!-- Three-Part Services / Solutions Section -->
   <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
