@@ -34,49 +34,53 @@
     </div>
   </header>
 
-  <!-- Hero Section, reduced to 40vh -->
+  <!-- Unified Hero Banner using Banner.png -->
   <section 
     class="hero"
     style="
-      height: 40vh; /* Reduced vertical extent */
-      background: url('Image1.jpg') center center / cover no-repeat;
+      height: 50vh; 
+      background: url('Banner.png') center center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       color: #fff;
       position: relative;
+      text-align: center;
+      padding: 2rem;
     "
   >
-    <div 
-      style="
-        background-color: rgba(0, 0, 0, 0.3); 
-        padding: 2rem; 
-        border-radius: 4px;
-      "
-    >
-      <h2>Navigate Climate Complexity with Confidence</h2>
-      <p>Advanced data, analysis, and insights to guide your organization's climate strategy.</p>
-    </div>
+    <!-- Semi-transparent overlay for all text -->
+    <div style="background-color: rgba(0, 0, 0, 0.4); border-radius: 4px; padding: 2rem; max-width: 800px; margin:auto;">
+      <h2 style="margin-bottom: 1rem;">Navigate Climate Complexity with Confidence</h2>
+      <p style="margin-bottom: 1.5rem;">
+        Advanced data, analysis, and insights to guide your organization's climate strategy.
+      </p>
+      <h3 style="margin-bottom: 1rem;">Welcome to Climate Compass</h3>
+      <p style="margin-bottom: 2rem;">
+        We offer world-class climate consulting, data-driven solutions, and expert guidance 
+        for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
+        providing high-resolution climate datasets, tailored analyses, and strategic advice.
+      </p>
 
-    <!-- “Explore Our Services” placed below the box -->
-    <a 
-      href="services.html" 
-      class="hero-cta"
-      style="
-        position: absolute; 
-        bottom: 2rem; 
-        background-color: #fff; 
-        color: #17494D; 
-        padding: 0.75rem 1.5rem;
-        border-radius: 4px;
-        font-weight: 600;
-        text-decoration: none;
-      "
-    >
-      Explore Our Services
-    </a>
+      <!-- “Explore Our Services” button at the bottom of this overlay -->
+      <a 
+        href="services.html" 
+        class="hero-cta"
+        style="
+          display: inline-block;
+          background-color: #fff; 
+          color: #17494D; 
+          padding: 0.75rem 1.5rem;
+          border-radius: 4px;
+          font-weight: 600;
+          text-decoration: none;
+        "
+      >
+        Explore Our Services
+      </a>
+    </div>
   </section>
+
 
 <!-- Full-width banner with preserved aspect ratio and a pop-out text box -->
 <section style="margin: 0; padding: 0; position: relative; text-align: center;">
