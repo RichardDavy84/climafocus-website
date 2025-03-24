@@ -38,7 +38,7 @@
 <section 
   class="hero"
   style="
-    height: 42vh;  /* ~30% less than the original 60vh */
+    height: 60vh;  /* ~30% less than the original 60vh */
     background: url('Image1.jpg') center center / cover no-repeat;
     display: flex;
     align-items: center;
@@ -54,25 +54,39 @@
   </div>
 </section>
 
-<!-- Introductory Text with Banner.png in background -->
+<!-- Introductory Text with Banner.png in background, showing full height of image -->
 <section 
   style="
-    max-width: 100%;
     margin: 0 auto; 
     line-height: 1.5; 
     text-align: center; 
-    background: url('Banner.png') center center / cover no-repeat;
-    padding: 3rem 1rem; 
-    color: #fff; /* Ensure readability on the banner background */
+    background: url('Banner.png') center top no-repeat;
+    background-size: contain; /* Show entire vertical extent, no cropping */
+    min-height: 600px;        /* Ensure enough space to display most/all of image */
+    padding: 2rem 1rem; 
+    position: relative;       /* Allows for absolutely-positioned elements if needed */
 "
 >
-  <h3>Welcome to Climate Compass</h3>
-  <p style="max-width: 800px; margin: 0 auto;">
-    We offer world-class climate consulting, data-driven solutions, and expert guidance 
-    for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
-    providing high-resolution climate datasets, tailored analyses, and strategic advice.
-  </p>
+  <!-- Pop-out box with slightly opaque background -->
+  <div 
+    style="
+      background-color: rgba(0, 0, 0, 0.5); 
+      max-width: 800px; 
+      margin: 0 auto; 
+      border-radius: 4px; 
+      padding: 2rem;
+      color: #fff;
+    "
+  >
+    <h3>Welcome to Climate Compass</h3>
+    <p>
+      We offer world-class climate consulting, data-driven solutions, and expert guidance 
+      for businesses, governments, and NGOs. Our team brings deep scientific expertise, 
+      providing high-resolution climate datasets, tailored analyses, and strategic advice.
+    </p>
+  </div>
 </section>
+
 
 
   <!-- Three-Part Services / Solutions Section -->
