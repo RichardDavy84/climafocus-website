@@ -78,27 +78,44 @@
     </a>
   </section>
 
-  <!-- Introductory Text with Banner.png in background, removing large min-height -->
-  <section 
+<!-- Full-width banner with preserved aspect ratio and a pop-out text box -->
+<section style="margin: 0; padding: 0; position: relative; text-align: center;">
+  
+  <!-- Display the banner at full width, auto height to keep aspect ratio -->
+  <img 
+    src="Banner.png" 
+    alt="Banner" 
     style="
-      margin: 0 auto; 
-      line-height: 1.5; 
-      text-align: center; 
-      background: url('Banner.png') center top no-repeat;
-      background-size: contain; 
-      padding: 2rem 1rem; 
-      position: relative;
+      width: 100%; 
+      height: auto; 
+      display: block;
+    "
+  />
+
+  <!-- Absolutely-positioned overlay for the text box -->
+  <div 
+    style="
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      pointer-events: none; /* so clicks pass through if needed */
     "
   >
-    <!-- Pop-out box with slightly opaque background -->
+    <!-- Slightly more translucent background (0.3) for the text box -->
     <div 
       style="
-        background-color: rgba(0, 0, 0, 0.5); 
-        max-width: 800px; 
-        margin: 0 auto; 
+        background-color: rgba(0, 0, 0, 0.3); 
+        padding: 2rem; 
         border-radius: 4px; 
-        padding: 2rem;
         color: #fff;
+        max-width: 800px; 
+        margin: auto;
+        pointer-events: auto; /* re-enable clicks inside the box if needed */
       "
     >
       <h3>Welcome to Climate Compass</h3>
@@ -108,7 +125,10 @@
         providing high-resolution climate datasets, tailored analyses, and strategic advice.
       </p>
     </div>
-  </section>
+  </div>
+  
+</section>
+
 
   <!-- Three-Part Services / Solutions Section -->
   <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
