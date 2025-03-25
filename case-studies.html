@@ -4,6 +4,24 @@
   <meta charset="UTF-8">
   <title>Climate Compass | Case Studies</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Inline overrides to reduce whitespace -->
+  <style>
+    /* Further reduce top/bottom margin around each video-case */
+    .video-case {
+      margin: 0.5rem 1rem !important;
+      min-height: 60vh !important; /* Lower from 80vh (or remove entirely if you prefer auto-height) */
+    }
+    /* Shrink padding inside case-content */
+    .case-content {
+      padding: 1rem !important;
+    }
+    /* Tighten paragraph spacing within case-content */
+    .case-content p {
+      margin-bottom: 0.75rem !important;
+      line-height: 1.5 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -77,7 +95,7 @@
     <div class="case-content">
       <h3>Wind Park in Scotland</h3>
       <p><strong>Challenge:</strong> Assessing the wind power density at 30 meter resolution for a Scottish hillside. Quantify the effect of including two “blackout” periods when turbines were turned off for a few weeks each year for maintenance.</p>
-      <p><strong>Approach:</strong> We downscaled wind power density to 30 meter resolution using hourly wind speeds, built a virtual wind generator to simulate power output in an interactive map, and created an interactive tool to assess the impact of downtime intervals on annual yield, while also exploring how future climate scenarios might shift wind patterns. </p>
+      <p><strong>Approach:</strong> We downscaled wind power density to 30 meter resolution using hourly wind speeds, built a virtual wind generator to simulate power output in an interactive map, and created an interactive tool to assess the impact of downtime intervals on annual yield, while also exploring how future climate scenarios might shift wind patterns.</p>
       <p><strong>Outcome:</strong> Clear recommendations on scheduling maintenance and optimizing energy production, plus a forward-looking plan for adaptation to projected wind variability.</p>
     </div>
   </section>
