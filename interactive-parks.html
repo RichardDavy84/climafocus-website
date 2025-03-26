@@ -2,7 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- SEO Title & Description -->
   <title>Climate Compass | Interactive Parks App</title>
+  <meta name="description" 
+        content="Explore Reisa National Park's climate futures with our interactive app, featuring scenario-based data and a traffic-light system for priority risks." />
+
+  <!-- Responsive Meta Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,13 +29,13 @@
       <a href="contact.html">Contact</a>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-          <img src="LinkedIn_logo.png" alt="LinkedIn">
+          <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
         </a>
         <a href="https://x.com/RDavy84" target="_blank">
-          <img src="X_logo.png" alt="X (Twitter)">
+          <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
         </a>
         <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-          <img src="BlueSky_logo.png" alt="BlueSky">
+          <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
         </a>
       </div>
     </div>
@@ -36,8 +44,8 @@
   <!-- Hero Section -->
   <section class="hero" style="background: url('Image1.jpg') center center/cover no-repeat;">
     <div class="hero-overlay">
-      <h2>Explore Climate Futures for a National Park in Northern Norway </h2>
-      <p>Interactive data visualization tool for Climate Futures in Reisa National Park</p>
+      <h2>Explore Climate Futures for Reisa National Park</h2>
+      <p>Interactive Data Visualization for Priority Climate Risks</p>
     </div>
   </section>
 
@@ -46,13 +54,14 @@
     <h3>Reisa National Park Explorer</h3>
     <p>
       This tool provides an overview of potential climate futures for Reisa National Park. 
-      It is oriented around the conservation priorities of the park managers e.g. Forest Fires, River summer access, and the user can select between these usiong the drop-down menu.
-      <br></br>
-      Each priority has it's own set of climate drivers with defined safe, neutral, and dangerous ranges which are summarised at a glance using a traffic light system. 
-      The metric to be visualised in the map and the timeseries below is chosen from the drop-down list.
-      You can adjust the time window and emissions scenario to see how the climate drivers of each priority may change over time.
-      <br></br>
-      When you click on the map you get an overview of the climate drivers at that particular location (to a resolution of 300m). 
+      It’s oriented around the park’s main conservation priorities—like forest fires or river access. 
+      Select a priority from the dropdown menu to see its climate drivers, classified by a 
+      “traffic light” system (safe, neutral, dangerous).
+    </p>
+    <p>
+      Adjust the time window and emissions scenario to explore changes over time. 
+      Clicking on the map reveals local climate drivers (300 m resolution). 
+      See how these metrics shift under different scenarios and plan accordingly.
     </p>
   </section>
 
@@ -62,11 +71,12 @@
       src="https://seasonalforecastsfornorway.shinyapps.io/Reisa_app/" 
       width="100%" 
       height="700" 
-      style="border:1px solid #ccc; border-radius:4px;">
+      style="border:1px solid #ccc; border-radius:4px;"
+      title="Reisa National Park Climate App">
     </iframe>
     <p style="margin-top:1rem; text-align:center; font-style:italic;">
-      (If the app doesn't load, you can access it directly at 
-      <a href="https://seasonalforecastsfornorway.shinyapps.io/Reisa_app/" target="_blank">this link</a>.)
+      If the app doesn't load, you can access it directly at 
+      <a href="https://seasonalforecastsfornorway.shinyapps.io/Reisa_app/" target="_blank">this link</a>.
     </p>
   </section>
 
