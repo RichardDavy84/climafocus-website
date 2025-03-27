@@ -81,13 +81,14 @@ header {
   position: relative;
   width: 100%;
   height: 44vh; /* ~10% larger than previous 40vh */
-  background: #ccc; /* fallback */
+  background: url('Banner.png') center center / cover no-repeat;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 .hero-overlay {
   /* Dark overlay now controlled by inline style for each page, 
      e.g., background-color: rgba(0,0,0,0.6); 
