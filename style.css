@@ -80,8 +80,8 @@ header {
 .hero {
   position: relative;
   width: 100%;
-  height: 44vh; /* ~10% larger than 40vh */
-  background: #ccc; /* fallback if no image loads */
+  height: 44vh; /* ~10% larger than previous 40vh */
+  background: #ccc; /* fallback */
   color: #fff;
   display: flex;
   align-items: center;
@@ -89,7 +89,10 @@ header {
   text-align: center;
 }
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.3);
+  /* Dark overlay now controlled by inline style for each page, 
+     e.g., background-color: rgba(0,0,0,0.6); 
+     This ensures we can vary if needed. 
+  */
   padding: 2rem;
   border-radius: 4px;
   max-width: 800px;
@@ -112,7 +115,7 @@ header {
   font-weight: 600;
   transition: opacity 0.3s;
   text-decoration: none;
-  margin-top: 1rem; /* so there's a bit of space above the button in the overlay */
+  margin-top: 1rem; /* spacing above the button */
 }
 .hero-cta:hover {
   opacity: 0.8;
@@ -278,84 +281,12 @@ header {
 .contact-hero {
   position: relative;
   width: 100%;
-  height: 40vh;
-  background: url('Image1.jpg') center center / cover no-repeat;
+  height: 44vh; /* matched hero size for consistency */
+  background: url('Banner.png') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
 }
 .contact-hero-overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 2rem;
-  border-radius: 4px;
-  text-align: center;
-}
-.contact-form-container {
-  background: url('Image2.jpg') center center / cover no-repeat;
-  padding: 4rem 1rem;
-}
-.contact-box {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: rgba(255,255,255,0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-.contact-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.contact-box label {
-  font-weight: 600;
-}
-.contact-box input,
-.contact-box textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.contact-box button {
-  background-color: #17494D;
-  color: #fff;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-.contact-box button:hover {
-  opacity: 0.9;
-}
-
-/* Footer */
-footer {
-  background-color: #17494D;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .hero {
-    height: 44vh; /* Keep consistent for mobile as well */
-  }
-  .hero-overlay h2 {
-    font-size: 1.5rem;
-  }
-  .founder-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .founder-image {
-    max-width: 80%;
-  }
-  .video-case {
-    min-height: 40vh; /* Even smaller on mobile if desired */
-  }
-}
+  background-color: rgba(0, 0, 0, 0.6);
