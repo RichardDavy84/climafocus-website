@@ -76,6 +76,72 @@ header {
   opacity: 0.7;
 }
 
+/* Existing header styles remain the same, we just add these new ones */
+
+/* 1. Hamburger Icon */
+.hamburger {
+  display: none; /* hidden on desktop by default */
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 28px; /* or whatever size you like */
+  height: auto;
+}
+
+/* 2. Mobile Nav Hidden by Default */
+.navbar {
+  /* On mobile, we’ll transform this into a vertical menu that’s hidden initially */
+  transition: max-height 0.4s ease-out;
+  overflow: hidden; /* so it collapses neatly */
+}
+
+/* 3. The “nav-open” class toggles the menu’s visibility (added by JS) */
+.nav-open {
+  max-height: 500px; /* or large enough to show all items */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  /* Show hamburger, hide the nav by default */
+  .hamburger {
+    display: block;
+  }
+
+  /* Navbar becomes hidden by default via max-height: 0; */
+  .navbar {
+    max-height: 0;
+    flex-direction: column;
+  }
+
+  /* Nav items in a column, centered or left aligned as you prefer */
+  .navbar a {
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2); 
+    /* optional separators */
+  }
+  
+  /* Social icons stack or remain in a row. Up to you. */
+  .social-icons {
+    margin: 1rem 0;
+    justify-content: center; /* or flex-start */
+  }
+}
+
+/* Desktop layout remains unchanged except for we remove any "overflow: hidden" if necessary. */
+@media (min-width: 769px) {
+  .navbar {
+    max-height: none; /* full nav visible on desktop */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    border: none; /* remove border used on mobile */
+  }
+}
+
 /* Hero / Common Sections */
 .hero {
   position: relative;
