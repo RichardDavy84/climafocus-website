@@ -80,8 +80,8 @@ header {
 .hero {
   position: relative;
   width: 100%;
-  height: 40vh; /* Reduced vertical extent */
-  background: #ccc; /* fallback */
+  height: 44vh; /* ~10% larger than 40vh */
+  background: #ccc; /* fallback if no image loads */
   color: #fff;
   display: flex;
   align-items: center;
@@ -92,6 +92,8 @@ header {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 2rem;
   border-radius: 4px;
+  max-width: 800px;
+  margin: auto;
 }
 .hero-overlay h2 {
   font-size: 2rem;
@@ -102,12 +104,15 @@ header {
   margin-bottom: 1rem;
 }
 .hero-cta {
+  display: inline-block;
   background-color: #fff;
   color: #17494D;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-weight: 600;
   transition: opacity 0.3s;
+  text-decoration: none;
+  margin-top: 1rem; /* so there's a bit of space above the button in the overlay */
 }
 .hero-cta:hover {
   opacity: 0.8;
@@ -193,14 +198,12 @@ header {
   max-width: 700px;
   margin: 2rem auto;
 }
-
-/* Updated for smaller whitespace between videos */
 .video-case {
   position: relative;
   color: #fff;
   overflow: hidden;
-  margin: 1rem 2rem;        /* Reduced from 3rem 2rem */
-  min-height: 80vh;         /* Using min-height for flexibility */
+  margin: 1rem 2rem;        
+  min-height: 80vh;         
 }
 .video-case .video-bg {
   position: absolute;
@@ -340,7 +343,7 @@ footer {
 /* Responsive Tweaks */
 @media (max-width: 768px) {
   .hero {
-    height: 40vh;
+    height: 44vh; /* Keep consistent for mobile as well */
   }
   .hero-overlay h2 {
     font-size: 1.5rem;
@@ -353,6 +356,6 @@ footer {
     max-width: 80%;
   }
   .video-case {
-    min-height: 40vh; 
+    min-height: 40vh; /* Even smaller on mobile if desired */
   }
 }
