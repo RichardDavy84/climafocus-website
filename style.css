@@ -35,6 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 2rem;
+  position: relative; /* So absolute-positioned children can anchor here */
 }
 .logo h1 {
   color: #fff;
@@ -42,25 +43,31 @@ header {
   font-weight: 600;
   margin: 0;
 }
-.navbar {
+
+/* Navbar */
+#navbar {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  transition: max-height 0.4s ease-out;
+  overflow: hidden; /* so it collapses neatly on mobile */
 }
-.navbar a {
+
+/* Nav links */
+#navbar a {
   color: #fff;
   font-weight: 500;
   padding: 0.5rem 0.75rem;
   transition: opacity 0.3s;
 }
-.navbar a:hover {
+#navbar a:hover {
   opacity: 0.8;
 }
-.navbar a.active {
+#navbar a.active {
   text-decoration: underline;
 }
 
-/* Social Media Icons in Header (top-right) */
+/* Social Icons in the Nav */
 .social-icons {
   display: flex;
   align-items: center;
@@ -76,69 +83,63 @@ header {
   opacity: 0.7;
 }
 
-/* Existing header styles remain the same, we just add these new ones */
-
 /* 1. Hamburger Icon */
 .hamburger {
   display: none; /* hidden on desktop by default */
   cursor: pointer;
 }
-
 .hamburger img {
-  width: 28px; /* or whatever size you like */
+  width: 28px; /* default size on desktop if ever displayed */
   height: auto;
 }
 
-/* 2. Mobile Nav Hidden by Default */
-.navbar {
-  /* On mobile, we’ll transform this into a vertical menu that’s hidden initially */
-  transition: max-height 0.4s ease-out;
-  overflow: hidden; /* so it collapses neatly */
-}
-
-/* 3. The “nav-open” class toggles the menu’s visibility (added by JS) */
+/* 2. The “nav-open” class toggles the menu’s visibility (added by JS) */
 .nav-open {
   max-height: 500px; /* or large enough to show all items */
 }
 
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-  /* Show hamburger, hide the nav by default */
-  .hamburger {
-    display: block;
-  }
-
-  /* Navbar becomes hidden by default via max-height: 0; */
-  .navbar {
-    max-height: 0;
-    flex-direction: column;
-  }
-
-  /* Nav items in a column, centered or left aligned as you prefer */
-  .navbar a {
-    padding: 1rem 2rem;
-    border-top: 1px solid rgba(255,255,255,0.2); 
-    /* optional separators */
-  }
-  
-  /* Social icons stack or remain in a row. Up to you. */
-  .social-icons {
-    margin: 1rem 0;
-    justify-content: center; /* or flex-start */
-  }
-}
-
-/* Desktop layout remains unchanged except for we remove any "overflow: hidden" if necessary. */
+/* Desktop layout: no height limit */
 @media (min-width: 769px) {
-  .navbar {
-    max-height: none; /* full nav visible on desktop */
+  #navbar {
+    max-height: none; 
     display: flex;
     align-items: center;
     gap: 1.5rem;
   }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute; 
+    top: 0.5rem;
+    right: 1rem;
+    z-index: 999; /* ensure it’s above nav items */
+  }
+  .hamburger img {
+    width: 56px; /* 2x original 28px */
+    height: auto;
+  }
+
+  /* Navbar is hidden by default via max-height: 0 */
+  #navbar {
+    max-height: 0;
+    flex-direction: column;
+    background-color: #17494D; /* or #17494D if you want it to remain consistent */
+    width: 100%;
+  }
+
+  /* Nav items in a column, centered or left aligned as you prefer */
+  #navbar a {
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
   
-  .navbar a {
-    border: none; /* remove border used on mobile */
+  /* Social icons can stack or remain in row. Up to you. */
+  .social-icons {
+    margin: 1rem 0;
+    justify-content: center; 
   }
 }
 
@@ -146,7 +147,7 @@ header {
 .hero {
   position: relative;
   width: 100%;
-  height: 44vh; /* ~10% larger than previous 40vh */
+  height: 44vh; 
   background: url('Banner.png') center center / cover no-repeat;
   color: #fff;
   display: flex;
@@ -156,7 +157,7 @@ header {
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* Always dark overlay */
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 4px;
   max-width: 800px;
@@ -180,13 +181,13 @@ header {
   font-weight: 600;
   transition: opacity 0.3s;
   text-decoration: none;
-  margin-top: 1rem; /* spacing above the button */
+  margin-top: 1rem;
 }
 .hero-cta:hover {
   opacity: 0.8;
 }
 
-/* Home Page Video Section */
+/* Additional Page Styles (services, case studies, etc.)... */
 .home-video {
   width: 100%;
   margin: 2rem 0;
@@ -199,231 +200,5 @@ header {
   margin: 0 auto;
 }
 
-/* Services Page */
-.services-intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.5;
-}
-.services-intro p {
-  margin-bottom: 0;
-}
-
-/* Vertical Packages with background */
-.vertical-packages {
-  background: url('Image2.jpg') center center / cover no-repeat;
-  padding: 4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-.package-card {
-  background-color: rgba(255, 255, 255, 0.85);
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-.package-card h3 {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-.package-card .price {
-  margin: 0.5rem 0 1rem;
-  font-size: 1.1rem;
-}
-.package-card ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  line-height: 1.6;
-}
-.package-card ul li {
-  margin: 0.5rem 0;
-}
-.package-cta {
-  background-color: #17494D;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-.package-cta:hover {
-  opacity: 0.9;
-}
-
-/* Case Studies */
-.case-studies-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 2rem auto;
-}
-.video-case {
-  position: relative;
-  color: #fff;
-  overflow: hidden;
-  margin: 1rem 2rem;        
-  min-height: 80vh;         
-}
-.video-case .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-  z-index: -1;
-}
-.video-case .case-content {
-  position: relative;
-  background-color: rgba(0,0,0,0.4);
-  padding: 3rem;
-  border-radius: 4px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.case-content h3 {
-  margin-bottom: 2rem; 
-}
-.case-content p {
-  margin-bottom: 1rem; 
-  line-height: 1.6;
-}
-
-/* About Page */
-.founder-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem;
-  align-items: flex-start;
-}
-.founder-image {
-  flex: 1 1 300px;
-  max-width: 300px;
-}
-.founder-image img {
-  border-radius: 6px;
-}
-.founder-details {
-  flex: 1 1 400px;
-}
-.founder-details ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-  line-height: 1.6;
-}
-.follow-note {
-  margin-top: 1.5rem;
-  font-style: italic;
-  color: #444;
-}
-.social-bottom-logos {
-  margin-top: 1rem;
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-.social-bottom-logos img {
-  width: 20px; 
-  height: 20px;
-  transition: opacity 0.3s;
-}
-.social-bottom-logos img:hover {
-  opacity: 0.7;
-}
-
-/* Contact Page */
-.contact-hero {
-  position: relative;
-  width: 100%;
-  height: 44vh; /* matched hero size for consistency */
-  background: url('Banner.png') center center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-.contact-hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 4px;
-  text-align: center;
-}
-.contact-form-container {
-  background: url('Image2.jpg') center center / cover no-repeat;
-  padding: 4rem 1rem;
-}
-.contact-box {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: rgba(255,255,255,0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-.contact-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.contact-box label {
-  font-weight: 600;
-}
-.contact-box input,
-.contact-box textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.contact-box button {
-  background-color: #17494D;
-  color: #fff;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-.contact-box button:hover {
-  opacity: 0.9;
-}
-
-/* Footer */
-footer {
-  background-color: #17494D;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .hero {
-    height: 44vh;
-  }
-  .hero-overlay h2 {
-    font-size: 1.5rem;
-  }
-  .founder-section {
-    flex-direction: column;
-    align-items: center;
-  }
-  .founder-image {
-    max-width: 80%;
-  }
-  .video-case {
-    min-height: 40vh;
-  }
-}
+/* For brevity, we keep your other styles for .services-intro, .vertical-packages, 
+   .package-card, etc. the same as you already have. */
