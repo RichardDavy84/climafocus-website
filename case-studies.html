@@ -38,13 +38,7 @@
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-
-      <!-- Hamburger Icon - visible on mobile -->
-  <div class="hamburger">
-    <img src="menu-icon.png" alt="Menu Icon">
-  </div>
-    
-    <div id="navbar" class="navbar">
+    <div class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="case-studies.html" class="active">Case Studies</a>
@@ -65,13 +59,13 @@
     </div>
   </header>
 
-      <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay">
-    <h2>Case Studies</h2>
-    <p>Real-World Impact Through Data and Expertise</p>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="hero" style="background: url('Image1.jpg') center center/cover no-repeat;">
+    <div class="hero-overlay">
+      <h2>Case Studies</h2>
+      <p>Real-World Impact Through Data and Expertise</p>
+    </div>
+  </section>
 
   <!-- Intro -->
   <section class="case-studies-intro">
@@ -133,20 +127,6 @@
     });
   </script>
 
-<script>
-  // Wait until the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navbar = document.querySelector('#navbar');
-
-    hamburger.addEventListener('click', function() {
-      // toggle 'nav-open' class on the navbar
-      navbar.classList.toggle('nav-open');
-    });
-  });
-</script>
-
-  
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
