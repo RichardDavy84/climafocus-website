@@ -9,11 +9,11 @@
   <!-- 2. Meta Description for Better SERP Visibility -->
   <meta name="description" 
         content="Climate Compass provides expert climate consulting, interactive data insights, and tailored forecasting solutions for businesses, governments, and NGOs." />
-  
-  <!-- 3. Optional Meta Keywords -->
+        
+  <!-- 3. Optional Meta Keywords (Not crucial for modern SEO, but can include briefly) -->
   <meta name="keywords" content="climate consulting, climate data, climate futures, climate forecasting, climate guidance, interactive climate tools" />
   
-  <!-- 4. Responsive Design -->
+  <!-- 4. Responsive Design: Important for SEO on Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- 5. Link to CSS File -->
@@ -26,12 +26,6 @@
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-
-  <!-- Hamburger Icon - visible on mobile -->
-  <div class="hamburger">
-    <img src="menu-icon.png" alt="Menu Icon">
-  </div>
-    
     <div class="navbar">
       <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
@@ -55,29 +49,53 @@
   </header>
 
   <!-- Hero Section -->
+  <!-- 
+       Removed inline 'height' override so it uses .hero { height: 44vh } from style.css
+       Kept background reference to Banner.png for the entire hero.
+  -->
   <section class="hero" style="background: url('Banner.png') center center / cover no-repeat;">
-    <div class="hero-overlay" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="hero-overlay">
       <h2 style="margin-bottom: 1rem;">Navigate Climate Complexity with Confidence</h2>
       <p style="margin-bottom: 1.5rem;">
         We offer world-class climate consulting, data-driven solutions, and expert guidance 
         for businesses, governments, and NGOs. 
       </p>
-      <!-- “Explore Our Services” inside the pop-out box -->
+      <!-- “Explore Our Services” now INSIDE the pop-out box -->
       <a 
         href="services.html" 
         class="hero-cta"
+        style="
+          background-color: #fff; 
+          color: #17494D; 
+          padding: 0.75rem 1.5rem;
+          border-radius: 4px;
+          font-weight: 600;
+          text-decoration: none;
+        "
       >
         Explore Our Services
       </a>
     </div>
   </section>
 
-  <!-- Tailored Timeframes Section -->
+  <!-- Tailored Timeframes Section (H2 ensures hierarchical heading structure) -->
   <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
-    <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">
+    <h2 
+      style="
+        text-align:center; 
+        font-size:2rem; 
+        margin-bottom:1.5rem;
+      "
+    >
       Tailored to Your Decision Timeframes
     </h2>
-    <div style="background-color: #f1f6f9; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <!-- Outer highlight box -->
+    <div style="
+      background-color: #f1f6f9; 
+      border-radius: 8px; 
+      padding: 2rem; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    ">
       <p style="margin-bottom:1.5rem;">
         We customize climate insights for the specific planning horizons of our clients. Whether 
         you need to respond to short-term operational shifts or plan decades ahead, our team delivers 
@@ -85,7 +103,13 @@
       </p>
 
       <!-- (1) Seasonal Forecasts -->
-      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <div style="
+        background-color:#fff; 
+        border-radius:6px; 
+        padding:1rem; 
+        margin-bottom:1.5rem; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      ">
         <h3 style="margin-top:0;">Seasonal Forecasts (3–12 months)</h3>
         <p style="margin:0;">
           Perfect for short-term decision-making, such as ski centers anticipating snowfall or farms 
@@ -94,7 +118,13 @@
       </div>
 
       <!-- (2) Climate Predictions -->
-      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <div style="
+        background-color:#fff; 
+        border-radius:6px; 
+        padding:1rem; 
+        margin-bottom:1.5rem; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      ">
         <h3 style="margin-top:0;">Climate Predictions (2–10 years)</h3>
         <p style="margin:0;">
           For mid-range planning needs, such as wind-farm siting or building infrastructure 
@@ -103,7 +133,12 @@
       </div>
 
       <!-- (3) Climate Projections -->
-      <div style="background-color:#fff; border-radius:6px; padding:1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <div style="
+        background-color:#fff; 
+        border-radius:6px; 
+        padding:1rem; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      ">
         <h3 style="margin-top:0;">Climate Projections (5–50+ years)</h3>
         <p style="margin:0;">
           For long-term adaptation—from national park management to rewilding projects—based on the same 
@@ -115,20 +150,35 @@
     <br><br>
     <em>Curious about real-world applications?</em> Check our 
     <a href="case-studies.html" style="text-decoration:underline;">Case Studies</a> 
-    for examples of our partnerships, or visit our 
+         for examples of our partnerships, or visit our 
     <a href="interactive-parks.html" style="text-decoration:underline;">Data Interaction</a> page to see our tools in action.
     We also offer <strong>training courses</strong> on effective usage of these tools.
   </section>
 
   <!-- What We Offer -->
   <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
-    <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">
+    <h2 style="
+      text-align:center; 
+      font-size:2rem; 
+      margin-bottom:1.5rem;
+    ">
       What We Offer
     </h2>
-    <div style="background-color: #f1f6f9; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <div style="
+      background-color: #f1f6f9; 
+      border-radius: 8px; 
+      padding: 2rem; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    ">
 
       <!-- 1) Tailored Climate Data -->
-      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <div style="
+        background-color:#fff; 
+        border-radius:6px; 
+        padding:1rem; 
+        margin-bottom:1.5rem; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      ">
         <h3 style="margin-bottom:0.5rem;">1) Tailored Climate Data</h3>
         <p style="margin-bottom:1rem;">
           Bringing climate data and uncertainty into focus for local issues. Many organizations have 
@@ -152,7 +202,13 @@
       </div>
 
       <!-- 2) Climate Consulting -->
-      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <div style="
+        background-color:#fff; 
+        border-radius:6px; 
+        padding:1rem; 
+        margin-bottom:1.5rem; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      ">
         <h3 style="margin-bottom:0.5rem;">2) Climate Consulting</h3>
         <p style="margin-bottom:1rem;">
           We provide <strong>comprehensive, comprehensible</strong> summaries of the latest climate research. 
@@ -176,7 +232,12 @@
       </div>
 
       <!-- 3) Interactive Data Tools -->
-      <div style="background-color:#fff; border-radius:6px; padding:1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <div style="
+        background-color:#fff; 
+        border-radius:6px; 
+        padding:1rem; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      ">
         <h3 style="margin-bottom:0.5rem;">3) Interactive Data Tools</h3>
         <p style="margin-bottom:1rem;">
           Bring your climate data to life with <strong>web-based tools</strong> that let you explore 
@@ -201,6 +262,15 @@
       </div>
 
     </div> <!-- end outer box -->
+  </section>
+
+  <!-- Bottom Video Section -->
+  <section class="home-video">
+    <video autoplay loop muted playsinline>
+      <source src="Nature_1.mp4" type="video/mp4">
+      <!-- Fallback text if video doesn't load -->
+      Your browser does not support the video tag.
+    </video>
   </section>
 
   <!-- Formbutton Script (floating) -->
