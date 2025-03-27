@@ -132,10 +132,25 @@
     });
   </script>
 
+<script>
+  // Wait until the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('#navbar');
+
+    hamburger.addEventListener('click', function() {
+      // toggle 'nav-open' class on the navbar
+      navbar.classList.toggle('nav-open');
+    });
+  });
+</script>
+
+  
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
   </footer>
+
 
 </body>
 </html>
