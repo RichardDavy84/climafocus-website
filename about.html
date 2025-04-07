@@ -7,6 +7,13 @@
 </head>
 <body>
 
+  <!-- Header -->
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <h1>Climate Compass</h1>
+    </div>
+
     <!-- 1) Hidden checkbox controlling nav open/close -->
     <input type="checkbox" id="menu-toggle" />
 
@@ -15,19 +22,17 @@
       <!-- Ensure menu-icon.png is placed in the same folder or adjust path -->
       <img src="menu-icon.png" alt="Menu Icon">
     </label>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <h1>Climate Compass</h1>
-    </div>
-    <div class="navbar">
+    
+    <!-- 3) The Navbar (using <nav> for semantics) -->
+    <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="case-studies.html">Case Studies</a>
       <a href="interactive-parks.html">Data Interaction</a>
       <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
+
+      <!-- Social Icons -->
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
           <img src="LinkedIn_logo.png" alt="LinkedIn">
@@ -39,7 +44,7 @@
           <img src="BlueSky_logo.png" alt="BlueSky">
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
