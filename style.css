@@ -35,6 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 2rem;
+  position: relative; /* For absolute-positioned hamburger on mobile */
 }
 .logo h1 {
   color: #fff;
@@ -42,21 +43,25 @@ header {
   font-weight: 600;
   margin: 0;
 }
-.navbar {
+
+/* Navbar - we add an ID so JS can toggle it */
+#navbar.navbar {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  transition: max-height 0.4s ease-out;
+  overflow: hidden; /* so it collapses on mobile */
 }
-.navbar a {
+#navbar a {
   color: #fff;
   font-weight: 500;
   padding: 0.5rem 0.75rem;
   transition: opacity 0.3s;
 }
-.navbar a:hover {
+#navbar a:hover {
   opacity: 0.8;
 }
-.navbar a.active {
+#navbar a.active {
   text-decoration: underline;
 }
 
@@ -74,6 +79,57 @@ header {
 }
 .social-icons img:hover {
   opacity: 0.7;
+}
+
+/* Hamburger Icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute; 
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 999; /* ensure above nav items */
+}
+.hamburger img {
+  width: 48px;  /* can be 56px or bigger if you like */
+  height: auto;
+}
+
+/* .nav-open: toggles the mobile nav open */
+.nav-open {
+  max-height: 600px; /* or large enough for all links */
+}
+
+/* Desktop layout: no height limit on nav */
+@media (min-width: 769px) {
+  #navbar {
+    max-height: none; 
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  /* Show hamburger, hide nav by default */
+  .hamburger {
+    display: block;
+  }
+  #navbar {
+    max-height: 0;
+    flex-direction: column;
+    background-color: #17494D; 
+    width: 100%;
+  }
+  #navbar a {
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  .social-icons {
+    margin: 1rem 0;
+    justify-content: center; 
+  }
 }
 
 /* Hero / Common Sections */
