@@ -27,14 +27,17 @@
       <h1>Climate Compass</h1>
     </div>
 
-    <!-- Hamburger Icon (only visible on mobile) -->
-    <div class="hamburger">
-      <!-- Make sure menu-icon.png is in the same folder or adjust the path -->
+    <!-- 1) Hidden checkbox controlling nav open/close -->
+    <input type="checkbox" id="menu-toggle" />
+
+    <!-- 2) Label for the hidden checkbox (the hamburger icon) -->
+    <label for="menu-toggle" class="hamburger">
+      <!-- Ensure menu-icon.png is placed in the same folder or adjust path -->
       <img src="menu-icon.png" alt="Menu Icon">
-    </div>
+    </label>
     
-    <!-- Navbar with ID used by the JS toggle -->
-    <div id="navbar" class="navbar">
+    <!-- 3) The main nav. We'll rely on the checkbox hack to open/close -->
+    <nav class="navbar">
       <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
       <a href="case-studies.html">Case Studies</a>
@@ -54,11 +57,11 @@
           <img src="BlueSky_logo.png" alt="Richard Davy on BlueSky">
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" style="background: url('Banner.png') center center / cover no-repeat;">
     <div class="hero-overlay">
       <h2 style="margin-bottom: 1rem;">Navigate Climate Complexity with Confidence</h2>
       <p style="margin-bottom: 1.5rem;">
@@ -267,19 +270,6 @@
         title: { backgroundColor: "gray" },
         button: { backgroundColor: "gray" }
       }
-    });
-  </script>
-
-  <!-- Mobile Nav Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const hamburger = document.querySelector('.hamburger');
-      const navbar = document.querySelector('#navbar');
-      
-      // Toggle .nav-open on #navbar
-      hamburger.addEventListener('click', function() {
-        navbar.classList.toggle('nav-open');
-      });
     });
   </script>
 
