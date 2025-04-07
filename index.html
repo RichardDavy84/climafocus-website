@@ -23,18 +23,17 @@
 
   <!-- Header -->
   <header>
-    <!-- Logo -->
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
 
-    <!-- Hamburger Icon (shown only on mobile via CSS) -->
+    <!-- Hamburger Icon (only visible on mobile) -->
     <div class="hamburger">
-      <!-- Replace "menu-icon.png" with your own icon path if different -->
+      <!-- Ensure menu-icon.png or any icon is in the same folder, or update path -->
       <img src="menu-icon.png" alt="Menu Icon">
     </div>
     
-    <!-- Navbar container with ID for the JS toggle -->
+    <!-- Navbar with ID used by the JS toggle -->
     <div id="navbar" class="navbar">
       <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
@@ -59,12 +58,12 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="background: url('Banner.png') center center / cover no-repeat;">
+  <section class="hero">
     <div class="hero-overlay">
       <h2 style="margin-bottom: 1rem;">Navigate Climate Complexity with Confidence</h2>
       <p style="margin-bottom: 1.5rem;">
         We offer world-class climate consulting, data-driven solutions, and expert guidance 
-        for businesses, governments, and NGOs. 
+        for businesses, governments, and NGOs.
       </p>
       <a 
         href="services.html" 
@@ -294,6 +293,7 @@
       const hamburger = document.querySelector('.hamburger');
       const navbar = document.querySelector('#navbar');
       
+      // Toggle .nav-open on #navbar
       hamburger.addEventListener('click', function() {
         navbar.classList.toggle('nav-open');
       });
