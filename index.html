@@ -3,36 +3,46 @@
 <head>
   <meta charset="UTF-8">
   
-  <!-- 1. SEO-Friendly Title Tag -->
+  <!-- SEO-Friendly Title Tag -->
   <title>Climate Compass | Expert Climate Consulting & Data Services</title>
   
-  <!-- 2. Meta Description for Better SERP Visibility -->
+  <!-- Meta Description for SERPs -->
   <meta name="description" 
         content="Climate Compass provides expert climate consulting, interactive data insights, and tailored forecasting solutions for businesses, governments, and NGOs." />
         
-  <!-- 3. Optional Meta Keywords (Not crucial for modern SEO, but can include briefly) -->
+  <!-- Optional Meta Keywords -->
   <meta name="keywords" content="climate consulting, climate data, climate futures, climate forecasting, climate guidance, interactive climate tools" />
   
-  <!-- 4. Responsive Design: Important for SEO on Mobile -->
+  <!-- Responsive Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- 5. Link to CSS File -->
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Header -->
   <header>
+    <!-- Logo -->
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-    <div class="navbar">
+
+    <!-- Hamburger Icon (shown only on mobile via CSS) -->
+    <div class="hamburger">
+      <!-- Replace "menu-icon.png" with your own icon path if different -->
+      <img src="menu-icon.png" alt="Menu Icon">
+    </div>
+    
+    <!-- Navbar container with ID for the JS toggle -->
+    <div id="navbar" class="navbar">
       <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
       <a href="case-studies.html">Case Studies</a>
       <a href="interactive-parks.html">Data Interaction</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+
       <!-- Social Icons -->
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
@@ -49,10 +59,6 @@
   </header>
 
   <!-- Hero Section -->
-  <!-- 
-       Removed inline 'height' override so it uses .hero { height: 44vh } from style.css
-       Kept background reference to Banner.png for the entire hero.
-  -->
   <section class="hero" style="background: url('Banner.png') center center / cover no-repeat;">
     <div class="hero-overlay">
       <h2 style="margin-bottom: 1rem;">Navigate Climate Complexity with Confidence</h2>
@@ -60,7 +66,6 @@
         We offer world-class climate consulting, data-driven solutions, and expert guidance 
         for businesses, governments, and NGOs. 
       </p>
-      <!-- “Explore Our Services” now INSIDE the pop-out box -->
       <a 
         href="services.html" 
         class="hero-cta"
@@ -280,6 +285,18 @@
         title: { backgroundColor: "gray" },
         button: { backgroundColor: "gray" }
       }
+    });
+  </script>
+
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navbar = document.querySelector('#navbar');
+      
+      hamburger.addEventListener('click', function() {
+        navbar.classList.toggle('nav-open');
+      });
     });
   </script>
 
