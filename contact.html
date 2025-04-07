@@ -3,15 +3,6 @@
 <head>
   <meta charset="UTF-8">
 
-    <!-- 1) Hidden checkbox controlling nav open/close -->
-    <input type="checkbox" id="menu-toggle" />
-
-    <!-- 2) Label for the hidden checkbox (the hamburger icon) -->
-    <label for="menu-toggle" class="hamburger">
-      <!-- Ensure menu-icon.png is placed in the same folder or adjust path -->
-      <img src="menu-icon.png" alt="Menu Icon">
-    </label>
-
   <!-- SEO Title & Description -->
   <title>Climate Compass | Contact</title>
   <meta name="description" 
@@ -20,16 +11,28 @@
   <!-- Responsive Meta Tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Hidden Checkbox Controlling the Menu Toggle -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Label for That Hidden Checkbox (Hamburger Icon) -->
+  <label for="menu-toggle" class="hamburger">
+    <!-- Adjust path if needed, ensure menu-icon.png is in the same folder -->
+    <img src="menu-icon.png" alt="Menu Icon">
+  </label>
 
   <!-- Header -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-    <div class="navbar">
+
+    <!-- Nav -->
+    <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="case-studies.html">Case Studies</a>
@@ -48,7 +51,7 @@
           <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Contact Hero Section -->
