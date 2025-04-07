@@ -18,10 +18,10 @@
 </head>
 <body>
 
-  <!-- Hidden Checkbox for Menu Toggle -->
+  <!-- 1) Hidden Checkbox for Menu Toggle -->
   <input type="checkbox" id="menu-toggle" />
 
-  <!-- Label for that Checkbox (Hamburger Icon) -->
+  <!-- 2) Label for that Checkbox (Hamburger Icon) -->
   <label for="menu-toggle" class="hamburger">
     <!-- Make sure menu-icon.png is in the correct folder or change the path -->
     <img src="menu-icon.png" alt="Menu Icon">
@@ -33,7 +33,7 @@
       <h1>Climate Compass</h1>
     </div>
 
-    <!-- Nav -->
+    <!-- Nav (must be a sibling of #menu-toggle for ~ selector) -->
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html" class="active">Services</a>
