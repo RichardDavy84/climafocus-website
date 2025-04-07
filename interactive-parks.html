@@ -3,15 +3,6 @@
 <head>
   <meta charset="UTF-8">
 
-    <!-- 1) Hidden checkbox controlling nav open/close -->
-    <input type="checkbox" id="menu-toggle" />
-
-    <!-- 2) Label for the hidden checkbox (the hamburger icon) -->
-    <label for="menu-toggle" class="hamburger">
-      <!-- Ensure menu-icon.png is placed in the same folder or adjust path -->
-      <img src="menu-icon.png" alt="Menu Icon">
-    </label>
-
   <!-- SEO Title & Description -->
   <title>Climate Compass | Interactive Parks App</title>
   <meta name="description" 
@@ -21,15 +12,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Inline overrides to reduce whitespace -->
+  <style>
+    /* Further reduce top/bottom margin around each video-case */
+    .video-case {
+      margin: 0.5rem 0.5rem !important;
+      min-height: 80vh !important;
+    }
+    /* Shrink padding inside case-content */
+    .case-content {
+      padding: 1rem !important;
+    }
+    /* Tighten paragraph spacing within case-content */
+    .case-content p {
+      margin-bottom: 0.5rem !important;
+      line-height: 1.5 !important;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Hidden Checkbox Controlling Nav -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Label for Hidden Checkbox (Hamburger) -->
+  <label for="menu-toggle" class="hamburger">
+    <!-- Adjust path if needed to find menu-icon.png -->
+    <img src="menu-icon.png" alt="Menu Icon">
+  </label>
 
   <!-- Header -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-    <div class="navbar">
+
+    <!-- Nav -->
+    <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="case-studies.html">Case Studies</a>
@@ -47,7 +67,7 @@
           <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
