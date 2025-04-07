@@ -18,12 +18,23 @@
 </head>
 <body>
 
+  <!-- Hidden Checkbox for Menu Toggle -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Label for that Checkbox (Hamburger Icon) -->
+  <label for="menu-toggle" class="hamburger">
+    <!-- Make sure menu-icon.png is in the correct folder or change the path -->
+    <img src="menu-icon.png" alt="Menu Icon">
+  </label>
+
   <!-- Header -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-    <div class="navbar">
+
+    <!-- Nav -->
+    <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html" class="active">Services</a>
       <a href="case-studies.html">Case Studies</a>
@@ -43,7 +54,7 @@
           <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
