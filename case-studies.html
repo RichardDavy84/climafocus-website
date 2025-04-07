@@ -3,15 +3,6 @@
 <head>
   <meta charset="UTF-8">
 
-    <!-- 1) Hidden checkbox controlling nav open/close -->
-    <input type="checkbox" id="menu-toggle" />
-
-    <!-- 2) Label for the hidden checkbox (the hamburger icon) -->
-    <label for="menu-toggle" class="hamburger">
-      <!-- Ensure menu-icon.png is placed in the same folder or adjust path -->
-      <img src="menu-icon.png" alt="Menu Icon">
-    </label>
-
   <!-- SEO Title & Description -->
   <title>Climate Compass | Case Studies</title>
   <meta name="description" 
@@ -42,18 +33,30 @@
 </head>
 <body>
 
+  <!-- Hidden Checkbox (controls menu open/close) -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Label for the hidden checkbox (the hamburger) -->
+  <label for="menu-toggle" class="hamburger">
+    <!-- Adjust path if needed, ensure menu-icon.png is in the same directory -->
+    <img src="menu-icon.png" alt="Menu Icon">
+  </label>
+
   <!-- Header -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-    <div class="navbar">
+
+    <!-- Nav -->
+    <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="case-studies.html" class="active">Case Studies</a>
       <a href="interactive-parks.html">Data Interaction</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
           <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
@@ -65,7 +68,7 @@
           <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero -->
