@@ -19,8 +19,9 @@
   <!-- Inline style to fix mobile overlap -->
   <style>
     @media (max-width: 768px) {
+      /* Add top margin so hero overlay doesn't overlap header on mobile */
       .hero {
-        margin-top: 3.5rem; /* Adjust as needed to avoid overlaying the header */
+        margin-top: 3.5rem; /* Adjust as needed */
       }
     }
   </style>
@@ -41,33 +42,33 @@
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-
-    <!-- Nav (must be a sibling of #menu-toggle for ~ selector) -->
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="interactive-parks.html">Data Interaction</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-          <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
-        </a>
-        <a href="https://x.com/RDavy84" target="_blank">
-          <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
-        </a>
-        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-          <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
-        </a>
-      </div>
-    </nav>
   </header>
 
+  <!-- Nav (must be a sibling of #menu-toggle for the ~ selector) -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="interactive-parks.html">Data Interaction</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
+      </a>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
+  <section class="hero" style="background: url('Banner.png') center center / cover no-repeat;">
     <div class="hero-overlay">
       <h2>Our Services</h2>
       <p>Data-Driven, Actionable Climate Solutions</p>
@@ -85,7 +86,6 @@
 
   <!-- Vertical Packages (background: Image2.jpg in CSS) -->
   <section class="vertical-packages">
-
     <!-- Basic Package -->
     <div class="package-card">
       <h3>Basic Package</h3>
@@ -123,7 +123,6 @@
       </ul>
       <a href="contact.html" class="package-cta">Request a Quote</a>
     </div>
-
   </section>
 
   <!-- Floating Formbutton -->
