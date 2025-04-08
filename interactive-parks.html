@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- SEO Title & Description -->
   <title>Climate Compass | Interactive Parks App</title>
-  <meta name="description" 
-        content="Explore Reisa National Park's climate futures with our interactive app, featuring scenario-based data and a traffic-light system for priority risks." />
-
-  <!-- Responsive Meta Tag -->
+  <meta name="description" content="Explore Reisa National Park's climate futures with our interactive app, featuring scenario-based data and a traffic-light system for priority risks." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="style.css">
 
-  <!-- Inline overrides to reduce whitespace -->
   <style>
-    /* Further reduce top/bottom margin around each video-case */
+    @media (max-width: 768px) {
+      .hero {
+        margin-top: 3.5rem;
+      }
+    }
+
+    /* Optional additional tweaks */
     .video-case {
       margin: 0.5rem 0.5rem !important;
       min-height: 80vh !important;
     }
-    /* Shrink padding inside case-content */
     .case-content {
       padding: 1rem !important;
     }
-    /* Tighten paragraph spacing within case-content */
     .case-content p {
       margin-bottom: 0.5rem !important;
       line-height: 1.5 !important;
@@ -33,12 +30,9 @@
 </head>
 <body>
 
-  <!-- 1) Hidden Checkbox for the Menu Toggle -->
+  <!-- Menu Toggle Control -->
   <input type="checkbox" id="menu-toggle" />
-
-  <!-- 2) Label for That Checkbox (Hamburger Icon) -->
   <label for="menu-toggle" class="hamburger">
-    <!-- Adjust path if needed to find menu-icon.png -->
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
@@ -49,7 +43,7 @@
     </div>
   </header>
 
-  <!-- 3) Navbar as a sibling of #menu-toggle for the hack to work -->
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -57,21 +51,10 @@
     <a href="interactive-parks.html" class="active">Data Interaction</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-        <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://x.com/RDavy84" target="_blank">
-        <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-        <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
-      </a>
-    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
+  <section class="hero" style="background: url('Banner.png') center center / cover no-repeat;">
     <div class="hero-overlay">
       <h2>Explore Climate Futures using interactive data</h2>
       <p>Interactive Data Visualization for Priority Climate Risks</p>
@@ -94,7 +77,7 @@
     </p>
   </section>
 
-  <!-- Embedding the Shiny App with an iframe -->
+  <!-- Shiny App Embed -->
   <section style="max-width:1200px; margin:2rem auto; padding:1rem;">
     <iframe 
       src="https://seasonalforecastsfornorway.shinyapps.io/Reisa_app/" 
@@ -109,7 +92,7 @@
     </p>
   </section>
 
-  <!-- Floating Formbutton -->
+  <!-- Formspree Floating Button -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
   <script>
     window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
@@ -131,6 +114,18 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
+    <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn" style="width:24px;">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="X (Twitter)" style="width:24px;">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky" style="width:24px;">
+      </a>
+    </div>
   </footer>
+
 </body>
 </html>
