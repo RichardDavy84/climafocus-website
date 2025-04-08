@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
 
-  <!-- Consistent mobile spacing for hero -->
   <style>
     @media (max-width: 768px) {
       .hero {
         margin-top: 3.5rem;
       }
     }
+
     .video-case {
       margin: 0.5rem 0.5rem !important;
       min-height: 80vh !important;
@@ -29,20 +29,20 @@
 </head>
 <body>
 
-  <!-- Hidden checkbox controls the mobile nav -->
+  <!-- Hidden checkbox for mobile menu -->
   <input type="checkbox" id="menu-toggle" />
   <label for="menu-toggle" class="hamburger">
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
-  <!-- Header with logo -->
+  <!-- Header -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
   </header>
 
-  <!-- Main nav, sibling to checkbox for hamburger to work -->
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -52,7 +52,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
     <div class="hero-overlay">
       <h2>Case Studies</h2>
@@ -68,7 +68,7 @@
     </p>
   </section>
 
-  <!-- Case Studies -->
+  <!-- Case Study 1 -->
   <section class="video-case">
     <video class="video-bg" src="Reindeer2.mp4" autoplay loop muted playsinline></video>
     <div class="case-content">
@@ -79,6 +79,7 @@
     </div>
   </section>
 
+  <!-- Case Study 2 -->
   <section class="video-case">
     <video class="video-bg" src="SeaIce.mp4" autoplay loop muted playsinline></video>
     <div class="case-content">
@@ -89,6 +90,7 @@
     </div>
   </section>
 
+  <!-- Case Study 3 -->
   <section class="video-case">
     <video class="video-bg" src="Wind_energy.mp4" autoplay loop muted playsinline></video>
     <div class="case-content">
@@ -102,7 +104,9 @@
   <!-- Floating Formbutton -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
   <script>
-    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    window.formbutton = window.formbutton || function () {
+      (formbutton.q = formbutton.q || []).push(arguments)
+    };
     formbutton("create", {
       action: "https://formspree.io/f/mblggkwq",
       title: "How can we help?",
@@ -118,7 +122,7 @@
     });
   </script>
 
-  <!-- Footer with social links -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
     <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
