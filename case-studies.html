@@ -11,10 +11,18 @@
   <!-- Responsive Meta Tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Link to Main CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Inline overrides to reduce whitespace -->
+  <!-- Inline style for mobile hero spacing -->
   <style>
+    @media (max-width: 768px) {
+      /* Push hero down to avoid overlap with header/hamburger */
+      .hero {
+        margin-top: 3.5rem; /* Adjust if needed */
+      }
+    }
+
     /* Further reduce top/bottom margin around each video-case */
     .video-case {
       margin: 0.5rem 0.5rem !important;
@@ -38,18 +46,18 @@
 
   <!-- 2) Label for hidden checkbox (hamburger) -->
   <label for="menu-toggle" class="hamburger">
-    <!-- Adjust path if needed, ensure menu-icon.png is in the same directory -->
+    <!-- Adjust path for menu-icon.png if needed -->
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
-  <!-- Header -->
+  <!-- Header (logo only, matching homepage) -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
   </header>
 
-  <!-- 3) Nav as a sibling to #menu-toggle -->
+  <!-- Nav as sibling to #menu-toggle, matching homepage structure -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
