@@ -10,29 +10,28 @@
 </head>
 <body>
 
-  <!-- Mobile nav toggle -->
+  <!-- Mobile nav toggle checkbox (used by hamburger menu) -->
   <input type="checkbox" id="menu-toggle" />
   <label for="menu-toggle" class="hamburger">
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
-  <!-- Grouped header and nav -->
-  <div class="site-header">
-    <header>
-      <div class="logo">
-        <h1>Climate Compass</h1>
-      </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1>Climate Compass</h1>
+    </div>
+  </header>
 
-    <nav class="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="services.html">Services</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="interactive-parks.html">Data Interaction</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+  <!-- Navigation (must be a sibling to #menu-toggle for checkbox hack) -->
+  <nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="interactive-parks.html">Data Interaction</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -48,38 +47,19 @@
     </div>
   </section>
 
- <!-- Tailored Timeframes Section (H2 ensures hierarchical heading structure) -->
+  <!-- Tailored Timeframes Section -->
   <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
-    <h2 
-      style="
-        text-align:center; 
-        font-size:2rem; 
-        margin-bottom:1.5rem;
-      "
-    >
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">
       Tailored to Your Decision Timeframes
     </h2>
-    <!-- Outer highlight box -->
-    <div style="
-      background-color: #f1f6f9; 
-      border-radius: 8px; 
-      padding: 2rem; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    ">
+    <div style="background-color: #f1f6f9; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
       <p style="margin-bottom:1.5rem;">
         We customize climate insights for the specific planning horizons of our clients. Whether 
         you need to respond to short-term operational shifts or plan decades ahead, our team delivers 
         data and guidance aligned with your exact needs:
       </p>
 
-      <!-- (1) Seasonal Forecasts -->
-      <div style="
-        background-color:#fff; 
-        border-radius:6px; 
-        padding:1rem; 
-        margin-bottom:1.5rem; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      ">
+      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <h3 style="margin-top:0;">Seasonal Forecasts (3–12 months)</h3>
         <p style="margin:0;">
           Perfect for short-term decision-making, such as ski centers anticipating snowfall or farms 
@@ -87,14 +67,7 @@
         </p>
       </div>
 
-      <!-- (2) Climate Predictions -->
-      <div style="
-        background-color:#fff; 
-        border-radius:6px; 
-        padding:1rem; 
-        margin-bottom:1.5rem; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      ">
+      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <h3 style="margin-top:0;">Climate Predictions (2–10 years)</h3>
         <p style="margin:0;">
           For mid-range planning needs, such as wind-farm siting or building infrastructure 
@@ -102,13 +75,7 @@
         </p>
       </div>
 
-      <!-- (3) Climate Projections -->
-      <div style="
-        background-color:#fff; 
-        border-radius:6px; 
-        padding:1rem; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      ">
+      <div style="background-color:#fff; border-radius:6px; padding:1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <h3 style="margin-top:0;">Climate Projections (5–50+ years)</h3>
         <p style="margin:0;">
           For long-term adaptation—from national park management to rewilding projects—based on the same 
@@ -120,121 +87,70 @@
     <br><br>
     <em>Curious about real-world applications?</em> Check our 
     <a href="case-studies.html" style="text-decoration:underline;">Case Studies</a> 
-         for examples of our partnerships, or visit our 
+    for examples of our partnerships, or visit our 
     <a href="interactive-parks.html" style="text-decoration:underline;">Data Interaction</a> page to see our tools in action.
     We also offer <strong>training courses</strong> on effective usage of these tools.
   </section>
 
   <!-- What We Offer -->
   <section style="max-width:1000px; margin:2rem auto; padding:1rem;">
-    <h2 style="
-      text-align:center; 
-      font-size:2rem; 
-      margin-bottom:1.5rem;
-    ">
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">
       What We Offer
     </h2>
-    <div style="
-      background-color: #f1f6f9; 
-      border-radius: 8px; 
-      padding: 2rem; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    ">
-
-      <!-- 1) Tailored Climate Data -->
-      <div style="
-        background-color:#fff; 
-        border-radius:6px; 
-        padding:1rem; 
-        margin-bottom:1.5rem; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      ">
+    <div style="background-color: #f1f6f9; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      
+      <!-- Tailored Climate Data -->
+      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <h3 style="margin-bottom:0.5rem;">1) Tailored Climate Data</h3>
         <p style="margin-bottom:1rem;">
-          Bringing climate data and uncertainty into focus for local issues. Many organizations have 
-          a qualitative grasp of climate change but lack the <strong>quantitative</strong> insights needed to 
-          prioritize and adapt effectively. We solve this by delivering <strong>high-resolution</strong>, 
-          uncertainty-aware data directly relevant to your local context.
+          We remove biases, improve resolution, and communicate uncertainties—so you can 
+          plan for multiple scenarios. Whether exploring short-term variability or 
+          longer-term trends, you will be ready for evolving climate realities.
         </p>
         <div style="display:flex; align-items:center; flex-wrap:wrap; gap:1rem;">
-          <img 
-            src="fade.gif" 
-            alt="High-Resolution Data Enhancement (Placeholder)" 
-            style="max-width:250px; border:1px solid #ccc; border-radius:4px;"
-          >
+          <img src="fade.gif" alt="High-Resolution Data Enhancement" style="max-width:250px; border:1px solid #ccc; border-radius:4px;">
           <p style="flex:1; line-height:1.6;">
             <strong>Why Our Solution?</strong><br>
-            We remove biases, improve resolution, and communicate uncertainties—so you can 
-            plan for multiple scenarios. Whether exploring short-term variability or 
-            longer-term trends, you will be ready for evolving climate realities.
+            High-resolution, uncertainty-aware data tailored to your region and needs.
           </p>
         </div>
       </div>
 
-      <!-- 2) Climate Consulting -->
-      <div style="
-        background-color:#fff; 
-        border-radius:6px; 
-        padding:1rem; 
-        margin-bottom:1.5rem; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      ">
+      <!-- Climate Consulting -->
+      <div style="background-color:#fff; border-radius:6px; padding:1rem; margin-bottom:1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <h3 style="margin-bottom:0.5rem;">2) Climate Consulting</h3>
         <p style="margin-bottom:1rem;">
-          We provide <strong>comprehensive, comprehensible</strong> summaries of the latest climate research. 
-          If you feel lost in an ocean of scientific literature—where IPCC reports may be too 
-          dense or not localized—our tailored consulting offers the clarity you need.
+          We distill cutting-edge climate science into actionable guidance—bridging the gap between IPCC reports and region-specific challenges.
         </p>
         <div style="display:flex; align-items:center; flex-wrap:wrap; gap:1rem;">
-          <img 
-            src="Davy_consulting2.jpg" 
-            alt="Climate Consulting Placeholder" 
-            style="max-width:250px; border:1px solid #ccc; border-radius:4px;"
-          >
+          <img src="Davy_consulting2.jpg" alt="Climate Consulting" style="max-width:250px; border:1px solid #ccc; border-radius:4px;">
           <p style="flex:1; line-height:1.6;">
             <strong>Why Our Solution?</strong><br>
-            We distill <strong>cutting-edge</strong> climate science into 
-            <em>actionable guidance</em>, bridging the gap between global reports and 
-            <strong>region-specific</strong> challenges. Get accessible briefs, clear 
-            communication, and data-driven recommendations suited to your local context.
+            Accessible briefs and data-driven advice for practical decisions.
           </p>
         </div>
       </div>
 
-      <!-- 3) Interactive Data Tools -->
-      <div style="
-        background-color:#fff; 
-        border-radius:6px; 
-        padding:1rem; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      ">
+      <!-- Interactive Tools -->
+      <div style="background-color:#fff; border-radius:6px; padding:1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <h3 style="margin-bottom:0.5rem;">3) Interactive Data Tools</h3>
         <p style="margin-bottom:1rem;">
-          Bring your climate data to life with <strong>web-based tools</strong> that let you explore 
-          scenarios and timelines dynamically. We have an example on our 
-          <a href="interactive-parks.html" style="text-decoration:underline;">Data Interaction</a> page.
-          As your data needs evolve, these platforms help you 
-          <em>visualize</em>, <em>compare</em>, and <em>adapt</em> without commissioning new studies each time.
+          Bring your climate data to life with interactive, web-based tools. Visit our 
+          <a href="interactive-parks.html" style="text-decoration:underline;">Data Interaction</a> page for examples.
         </p>
         <div style="display:flex; align-items:center; flex-wrap:wrap; gap:1rem;">
-          <img 
-            src="data_interaction.png" 
-            alt="Data Interaction Placeholder" 
-            style="max-width:250px; border:1px solid #ccc; border-radius:4px;"
-          >
+          <img src="data_interaction.png" alt="Data Interaction" style="max-width:250px; border:1px solid #ccc; border-radius:4px;">
           <p style="flex:1; line-height:1.6;">
             <strong>Why Our Solution?</strong><br>
-            Static reports quickly become outdated. Our interactive tools provide 
-            <strong>ongoing flexibility</strong>, ensuring you can drill deeper into the data, 
-            test what-if scenarios, and keep pace with evolving challenges.
+            Dynamic tools that adapt with your needs—no new reports required.
           </p>
         </div>
       </div>
 
-    </div> <!-- end outer box -->
+    </div>
   </section>
 
-  <!-- Formbutton Script (floating) -->
+  <!-- Contact Button (Formspree Floating Widget) -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
   <script>
     window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
@@ -253,7 +169,7 @@
     });
   </script>
 
-  <!-- Footer with Social Icons -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
     <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
