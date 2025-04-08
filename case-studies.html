@@ -2,37 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- SEO Title & Description -->
   <title>Climate Compass | Case Studies</title>
-  <meta name="description" 
-        content="Discover how Climate Compass solves real-world climate challenges for national parks, NGOs, and energy companies through advanced data and consulting." />
-
-  <!-- Responsive Meta Tag -->
+  <meta name="description" content="Discover how Climate Compass solves real-world climate challenges for national parks, NGOs, and energy companies through advanced data and consulting." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Link to Main CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Inline style for mobile hero spacing -->
+  <!-- Consistent mobile spacing for hero -->
   <style>
     @media (max-width: 768px) {
-      /* Push hero down to avoid overlap with header/hamburger */
       .hero {
-        margin-top: 3.5rem; /* Adjust if needed */
+        margin-top: 3.5rem;
       }
     }
-
-    /* Further reduce top/bottom margin around each video-case */
     .video-case {
       margin: 0.5rem 0.5rem !important;
       min-height: 80vh !important;
     }
-    /* Shrink padding inside case-content */
     .case-content {
       padding: 1rem !important;
     }
-    /* Tighten paragraph spacing within case-content */
     .case-content p {
       margin-bottom: 0.5rem !important;
       line-height: 1.5 !important;
@@ -41,23 +29,20 @@
 </head>
 <body>
 
-  <!-- 1) Hidden Checkbox (controls menu open/close) -->
+  <!-- Hidden checkbox controls the mobile nav -->
   <input type="checkbox" id="menu-toggle" />
-
-  <!-- 2) Label for hidden checkbox (hamburger) -->
   <label for="menu-toggle" class="hamburger">
-    <!-- Adjust path for menu-icon.png if needed -->
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
-  <!-- Header (logo only, matching homepage) -->
+  <!-- Header with logo -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
   </header>
 
-  <!-- Nav as sibling to #menu-toggle, matching homepage structure -->
+  <!-- Main nav, sibling to checkbox for hamburger to work -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -65,18 +50,6 @@
     <a href="interactive-parks.html">Data Interaction</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-        <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://x.com/RDavy84" target="_blank">
-        <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-        <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
-      </a>
-    </div>
   </nav>
 
   <!-- Hero -->
@@ -95,7 +68,7 @@
     </p>
   </section>
 
-  <!-- Case Study 1: Park managers in Northern Norway -->
+  <!-- Case Studies -->
   <section class="video-case">
     <video class="video-bg" src="Reindeer2.mp4" autoplay loop muted playsinline></video>
     <div class="case-content">
@@ -106,7 +79,6 @@
     </div>
   </section>
 
-  <!-- Case Study 2: Memorandum for a US-based environmental advocacy group -->
   <section class="video-case">
     <video class="video-bg" src="SeaIce.mp4" autoplay loop muted playsinline></video>
     <div class="case-content">
@@ -117,7 +89,6 @@
     </div>
   </section>
 
-  <!-- Case Study 3: Wind Park in Scotland -->
   <section class="video-case">
     <video class="video-bg" src="Wind_energy.mp4" autoplay loop muted playsinline></video>
     <div class="case-content">
@@ -147,9 +118,21 @@
     });
   </script>
 
-  <!-- Footer -->
+  <!-- Footer with social links -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
+    <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn" style="width:24px;">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="Twitter/X" style="width:24px;">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky" style="width:24px;">
+      </a>
+    </div>
   </footer>
+
 </body>
 </html>
