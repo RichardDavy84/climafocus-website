@@ -34,7 +34,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0.5rem; ! 0.5, 4
+  padding: 0.5rem 4rem; ! 0.5, 4
   position: relative;
   z-index: 1;
 }
@@ -114,7 +114,7 @@ header {
   justify-content: center;
   text-align: center;
   z-index: 1;
-  padding-top: 8rem;
+  padding-top: 0.5rem; ! This was 8rem !!!!!!!!!!
 }
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.6);
