@@ -36,7 +36,7 @@ header {
   justify-content: space-between;
   padding: 0.5rem 2rem;
   position: relative;
-  z-index: 2; /* Add this */
+  z-index: 100; /* Add this */
 }
 .logo h1 {
   color: #fff;
@@ -71,7 +71,7 @@ header {
   transition: max-height 0.4s ease-out;
   overflow: hidden; 
   position: relative; /* Add this */
-  z-index: 2;         /* And this */
+  z-index: 200;         /* And this */
 }
 
 /* Nav links */
