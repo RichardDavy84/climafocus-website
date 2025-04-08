@@ -2,73 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  
-  <!-- SEO-Friendly Title Tag -->
   <title>Climate Compass | Expert Climate Consulting & Data Services</title>
-  
-  <!-- Meta Description for SERPs -->
-  <meta name="description" 
-        content="Climate Compass provides expert climate consulting, interactive data insights, and tailored forecasting solutions for businesses, governments, and NGOs." />
-        
-  <!-- Optional Meta Keywords -->
+  <meta name="description" content="Climate Compass provides expert climate consulting, interactive data insights, and tailored forecasting solutions for businesses, governments, and NGOs." />
   <meta name="keywords" content="climate consulting, climate data, climate futures, climate forecasting, climate guidance, interactive climate tools" />
-  
-  <!-- Responsive Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Inline style or media query to fix overlay overlap on mobile -->
+  <!-- Mobile margin fix for hero section -->
   <style>
     @media (max-width: 768px) {
-      /* Add some top margin or padding to .hero so it sits below the nav/hamburger */
       .hero {
-        margin-top: 3.5rem; /* adjust as needed */
+        margin-top: 3.5rem;
       }
     }
   </style>
-  
-  <!-- Link to CSS -->
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Mobile nav toggle -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+    <img src="menu-icon.png" alt="Menu Icon">
+  </label>
+
+  <!-- Header with logo only -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-
-    <!-- 1) Hidden checkbox controlling nav open/close -->
-    <input type="checkbox" id="menu-toggle" />
-
-    <!-- 2) Label for the hidden checkbox (the hamburger icon) -->
-    <label for="menu-toggle" class="hamburger">
-      <!-- Ensure menu-icon.png is placed in the same folder or adjust path -->
-      <img src="menu-icon.png" alt="Menu Icon">
-    </label>
-    
-    <!-- 3) The main nav. We'll rely on the checkbox hack to open/close -->
-    <nav class="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="services.html">Services</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="interactive-parks.html">Data Interaction</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-          <img src="LinkedIn_logo.png" alt="Richard Davy LinkedIn">
-        </a>
-        <a href="https://x.com/RDavy84" target="_blank">
-          <img src="X_logo.png" alt="Richard Davy on X (Twitter)">
-        </a>
-        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-          <img src="BlueSky_logo.png" alt="Richard Davy on BlueSky">
-        </a>
-      </div>
-    </nav>
   </header>
+
+  <!-- Main navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="interactive-parks.html">Data Interaction</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero" style="background: url('Banner.png') center center / cover no-repeat;">
@@ -78,18 +51,7 @@
         We offer world-class climate consulting, data-driven solutions, and expert guidance 
         for businesses, governments, and NGOs.
       </p>
-      <a 
-        href="services.html" 
-        class="hero-cta"
-        style="
-          background-color: #fff; 
-          color: #17494D; 
-          padding: 0.75rem 1.5rem;
-          border-radius: 4px;
-          font-weight: 600;
-          text-decoration: none;
-        "
-      >
+      <a href="services.html" class="hero-cta" style="background-color: #fff; color: #17494D; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; text-decoration: none;">
         Explore Our Services
       </a>
     </div>
@@ -283,9 +245,20 @@
     });
   </script>
 
-  <!-- Footer -->
+  <!-- Footer with Social Icons -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
+    <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn" style="width:24px;">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="Twitter/X" style="width:24px;">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky" style="width:24px;">
+      </a>
+    </div>
   </footer>
 
 </body>
