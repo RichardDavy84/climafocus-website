@@ -16,12 +16,12 @@
 </head>
 <body>
 
-  <!-- Hidden Checkbox Controlling the Menu Toggle -->
+  <!-- 1) Hidden Checkbox for Menu Toggle -->
   <input type="checkbox" id="menu-toggle" />
 
-  <!-- Label for That Hidden Checkbox (Hamburger Icon) -->
+  <!-- 2) Label for the Hidden Checkbox (Hamburger Icon) -->
   <label for="menu-toggle" class="hamburger">
-    <!-- Adjust path if needed, ensure menu-icon.png is in the same folder -->
+    <!-- Update path to menu-icon.png as needed -->
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
@@ -30,29 +30,29 @@
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-
-    <!-- Nav -->
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="interactive-parks.html">Data Interaction</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="active">Contact</a>
-
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-          <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
-        </a>
-        <a href="https://x.com/RDavy84" target="_blank">
-          <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
-        </a>
-        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-          <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
-        </a>
-      </div>
-    </nav>
   </header>
+
+  <!-- 3) Nav (must be a sibling of #menu-toggle for the CSS hack) -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="interactive-parks.html">Data Interaction</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
+      </a>
+    </div>
+  </nav>
 
   <!-- Contact Hero Section -->
   <section class="contact-hero">
