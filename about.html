@@ -7,45 +7,45 @@
 </head>
 <body>
 
+  <!-- 1) Hidden checkbox controlling nav open/close -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- 2) Label for the hidden checkbox (hamburger icon) -->
+  <label for="menu-toggle" class="hamburger">
+    <!-- Ensure menu-icon.png is in the same folder or adjust path -->
+    <img src="menu-icon.png" alt="Menu Icon">
+  </label>
+
   <!-- Header -->
   <header>
     <!-- Logo -->
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
-
-    <!-- 1) Hidden checkbox controlling nav open/close -->
-    <input type="checkbox" id="menu-toggle" />
-
-    <!-- 2) Label for the hidden checkbox (the hamburger icon) -->
-    <label for="menu-toggle" class="hamburger">
-      <!-- Ensure menu-icon.png is placed in the same folder or adjust path -->
-      <img src="menu-icon.png" alt="Menu Icon">
-    </label>
-    
-    <!-- 3) The Navbar (using <nav> for semantics) -->
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="interactive-parks.html">Data Interaction</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
-
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-          <img src="LinkedIn_logo.png" alt="LinkedIn">
-        </a>
-        <a href="https://x.com/RDavy84" target="_blank">
-          <img src="X_logo.png" alt="X (Twitter)">
-        </a>
-        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-          <img src="BlueSky_logo.png" alt="BlueSky">
-        </a>
-      </div>
-    </nav>
   </header>
+
+  <!-- 3) The Navbar (sibling of #menu-toggle) -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="interactive-parks.html">Data Interaction</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="X (Twitter)">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky">
+      </a>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
