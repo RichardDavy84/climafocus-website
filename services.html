@@ -2,49 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- SEO-Focused Title -->
   <title>Climate Compass | Climate Data & Consulting Services</title>
-
-  <!-- Meta Description -->
-  <meta name="description" 
-        content="Explore Climate Compass services: custom climate data packages, expert advisory, and comprehensive solutions for businesses, NGOs, and public agencies." />
-
-  <!-- Responsive Meta Tag -->
+  <meta name="description" content="Explore Climate Compass services: custom climate data packages, expert advisory, and comprehensive solutions for businesses, NGOs, and public agencies." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Link to Your CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Inline style to fix mobile overlap -->
   <style>
     @media (max-width: 768px) {
-      /* Add top margin so hero overlay doesn't overlap header on mobile */
       .hero {
-        margin-top: 3.5rem; /* Adjust as needed */
+        margin-top: 3.5rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 1) Hidden Checkbox for Menu Toggle -->
+  <!-- Mobile nav toggle -->
   <input type="checkbox" id="menu-toggle" />
-
-  <!-- 2) Label for that Checkbox (Hamburger Icon) -->
   <label for="menu-toggle" class="hamburger">
-    <!-- Make sure menu-icon.png is in the correct folder or change the path -->
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
-  <!-- Header -->
+  <!-- Header with logo only -->
   <header>
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
   </header>
 
-  <!-- Nav (must be a sibling of #menu-toggle for the ~ selector) -->
+  <!-- Navigation bar -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="services.html" class="active">Services</a>
@@ -52,19 +38,6 @@
     <a href="interactive-parks.html">Data Interaction</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-        <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://x.com/RDavy84" target="_blank">
-        <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-        <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
-      </a>
-    </div>
   </nav>
 
   <!-- Hero Section -->
@@ -84,17 +57,17 @@
     </p>
   </section>
 
-  <!-- Vertical Packages (background: Image2.jpg in CSS) -->
+  <!-- Vertical Packages -->
   <section class="vertical-packages">
     <!-- Basic Package -->
     <div class="package-card">
       <h3>Basic Package</h3>
       <p class="price"><strong>Guide price: $6k</strong></p>
       <ul>
-        <li>-One consultation (up to 2 hours)</li>
-        <li>-Small-region high resolution (&lt;1 km) climate datasets</li>
-        <li>-Sector-specific metrics</li>
-        <li>-Summary presentation of key findings</li>
+        <li>- One consultation (up to 2 hours)</li>
+        <li>- Small-region high resolution (&lt;1 km) climate datasets</li>
+        <li>- Sector-specific metrics</li>
+        <li>- Summary presentation of key findings</li>
       </ul>
       <a href="contact.html" class="package-cta">Request a Quote</a>
     </div>
@@ -104,9 +77,9 @@
       <h3>Expert Advisory</h3>
       <p class="price"><strong>Guide price: $5k</strong></p>
       <ul>
-        <li>-Targeted memos & briefings</li>
-        <li>-Synthesis of current literature</li>
-        <li>-One remote consultation (up to 2 hours)</li>
+        <li>- Targeted memos & briefings</li>
+        <li>- Synthesis of current literature</li>
+        <li>- One remote consultation (up to 2 hours)</li>
       </ul>
       <a href="contact.html" class="package-cta">Request a Quote</a>
     </div>
@@ -116,16 +89,16 @@
       <h3>Comprehensive Package</h3>
       <p class="price"><strong>Guide price: $20k</strong></p>
       <ul>
-        <li>-Three online consultations (2 hours each): establishing needs, co-designing tools, presenting results</li>
-        <li>-Customized climate data & sector-specific metrics</li>
-        <li>-Online tool for data interaction</li>
-        <li>-Written report of key findings</li>
+        <li>- Three online consultations (2 hours each): establishing needs, co-designing tools, presenting results</li>
+        <li>- Customized climate data & sector-specific metrics</li>
+        <li>- Online tool for data interaction</li>
+        <li>- Written report of key findings</li>
       </ul>
       <a href="contact.html" class="package-cta">Request a Quote</a>
     </div>
   </section>
 
-  <!-- Floating Formbutton -->
+  <!-- Formspree Floating Button -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
   <script>
     window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
@@ -144,9 +117,20 @@
     });
   </script>
 
-  <!-- Footer -->
+  <!-- Footer with Social Icons -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
+    <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn" style="width:24px;">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="Twitter/X" style="width:24px;">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky" style="width:24px;">
+      </a>
+    </div>
   </footer>
 
 </body>
