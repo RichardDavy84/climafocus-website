@@ -3,28 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Climate Compass | About</title>
+  <meta name="description" content="Learn more about Climate Compass, founded by Dr. Richard Davy to bring actionable climate insights to organizations worldwide." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 1) Hidden checkbox controlling nav open/close -->
+  <!-- Mobile menu toggle -->
   <input type="checkbox" id="menu-toggle" />
-
-  <!-- 2) Label for the hidden checkbox (hamburger icon) -->
   <label for="menu-toggle" class="hamburger">
-    <!-- Ensure menu-icon.png is in the same folder or adjust path -->
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
   <!-- Header -->
   <header>
-    <!-- Logo -->
     <div class="logo">
       <h1>Climate Compass</h1>
     </div>
   </header>
 
-  <!-- 3) The Navbar (sibling of #menu-toggle) -->
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -32,22 +30,9 @@
     <a href="interactive-parks.html">Data Interaction</a>
     <a href="about.html" class="active">About</a>
     <a href="contact.html">Contact</a>
-
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-        <img src="LinkedIn_logo.png" alt="LinkedIn">
-      </a>
-      <a href="https://x.com/RDavy84" target="_blank">
-        <img src="X_logo.png" alt="X (Twitter)">
-      </a>
-      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-        <img src="BlueSky_logo.png" alt="BlueSky">
-      </a>
-    </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" style="background: url('Banner.png') center center/cover no-repeat;">
     <div class="hero-overlay">
       <h2>About Climate Compass</h2>
@@ -55,7 +40,7 @@
     </div>
   </section>
 
-  <!-- Founder / Team Section -->
+  <!-- Founder Section -->
   <section class="founder-section">
     <div class="founder-image">
       <img src="RichardDavy-portrait.JPG" alt="Dr. Richard Davy Portrait">
@@ -79,24 +64,15 @@
         Interested in staying updated? Follow Dr. Davy on social media for the latest climate 
         insights and project news!
       </p>
-      <div class="social-bottom-logos">
-        <a href="https://x.com/RDavy84" target="_blank">
-          <img src="X_logo.png" alt="X (Twitter)">
-        </a>
-        <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-          <img src="LinkedIn_logo.png" alt="LinkedIn">
-        </a>
-        <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-          <img src="BlueSky_logo.png" alt="BlueSky">
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- Floating Formbutton -->
+  <!-- Floating Form Button -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
   <script>
-    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    window.formbutton = window.formbutton || function () {
+      (formbutton.q = formbutton.q || []).push(arguments);
+    };
     formbutton("create", {
       action: "https://formspree.io/f/mblggkwq",
       title: "How can we help?",
@@ -112,9 +88,20 @@
     });
   </script>
 
-  <!-- Footer -->
+  <!-- Footer with Social Icons -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
+    <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn" style="width:24px;">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="Twitter/X" style="width:24px;">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky" style="width:24px;">
+      </a>
+    </div>
   </footer>
 
 </body>
