@@ -15,6 +15,16 @@
   
   <!-- Responsive Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Inline style or media query to fix overlay overlap on mobile -->
+  <style>
+    @media (max-width: 768px) {
+      /* Add some top margin or padding to .hero so it sits below the nav/hamburger */
+      .hero {
+        margin-top: 3.5rem; /* adjust as needed */
+      }
+    }
+  </style>
   
   <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
