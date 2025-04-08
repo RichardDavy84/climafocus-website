@@ -2,26 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- SEO Title & Description -->
   <title>Climate Compass | Contact</title>
-  <meta name="description" 
-        content="Get in touch with Climate Compass to discuss climate data, consulting, or interactive climate tools for your organization." />
-
-  <!-- Responsive Meta Tag -->
+  <meta name="description" content="Get in touch with Climate Compass to discuss climate data, consulting, or interactive climate tools for your organization." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 1) Hidden Checkbox for Menu Toggle -->
+  <!-- Mobile nav toggle -->
   <input type="checkbox" id="menu-toggle" />
-
-  <!-- 2) Label for the Hidden Checkbox (Hamburger Icon) -->
   <label for="menu-toggle" class="hamburger">
-    <!-- Update path to menu-icon.png as needed -->
     <img src="menu-icon.png" alt="Menu Icon">
   </label>
 
@@ -32,7 +22,7 @@
     </div>
   </header>
 
-  <!-- 3) Nav (must be a sibling of #menu-toggle for the CSS hack) -->
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -40,21 +30,9 @@
     <a href="interactive-parks.html">Data Interaction</a>
     <a href="about.html">About</a>
     <a href="contact.html" class="active">Contact</a>
-
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
-        <img src="LinkedIn_logo.png" alt="LinkedIn logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://x.com/RDavy84" target="_blank">
-        <img src="X_logo.png" alt="X (Twitter) logo linking to Richard Davy's profile">
-      </a>
-      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
-        <img src="BlueSky_logo.png" alt="BlueSky logo linking to Richard Davy's profile">
-      </a>
-    </div>
   </nav>
 
-  <!-- Contact Hero Section -->
+  <!-- Hero Section -->
   <section class="contact-hero">
     <div class="contact-hero-overlay">
       <h2>Contact Us</h2>
@@ -62,10 +40,9 @@
     </div>
   </section>
 
-  <!-- Contact Form (Formspree) -->
+  <!-- Contact Form -->
   <section class="contact-form-container">
     <div class="contact-box">
-      <!-- Replace the action with your unique endpoint -->
       <form action="https://formspree.io/f/mblggkwq" method="POST">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required>
@@ -79,7 +56,6 @@
         <label for="message">Message / Project Overview *</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
-        <!-- Hidden input to identify website submissions -->
         <input type="hidden" name="_subject" value="New Inquiry from Climate Compass Website" />
 
         <button type="submit">Send Message</button>
@@ -90,7 +66,9 @@
   <!-- Floating Formbutton -->
   <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
   <script>
-    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    window.formbutton = window.formbutton || function () {
+      (formbutton.q = formbutton.q || []).push(arguments)
+    };
     formbutton("create", {
       action: "https://formspree.io/f/mblggkwq",
       title: "How can we help?",
@@ -106,9 +84,20 @@
     });
   </script>
 
-  <!-- Footer -->
+  <!-- Footer with Social Icons -->
   <footer>
     <p>&copy; 2025 Climate Compass. All rights reserved.</p>
+    <div class="social-bottom-logos" style="margin-top:1rem; display:flex; gap:0.75rem; justify-content:center;">
+      <a href="https://www.linkedin.com/in/richard-davy-9261a430/" target="_blank">
+        <img src="LinkedIn_logo.png" alt="LinkedIn" style="width:24px;">
+      </a>
+      <a href="https://x.com/RDavy84" target="_blank">
+        <img src="X_logo.png" alt="Twitter/X" style="width:24px;">
+      </a>
+      <a href="https://bsky.app/profile/davyclimate.bsky.social" target="_blank">
+        <img src="BlueSky_logo.png" alt="BlueSky" style="width:24px;">
+      </a>
+    </div>
   </footer>
 
 </body>
